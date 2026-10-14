@@ -1,0 +1,487 @@
+/**
+ * MIROSA CAFE & KITCHEN - CORE DATA REPOSITORY
+ * Himayat Nagar, Hyderabad, Telangana 500029
+ */
+
+export const RESTAURANT_INFO = {
+  name: "Mirosa Cafe & Kitchen",
+  tagline: "An Experience Worth Savoring",
+  subtitle: "Thoughtfully prepared food, delightful flavors and moments worth sharing in the heart of Himayat Nagar.",
+  address: "3-6-236/2, Street No. 15, AP State Housing Board, Himayatnagar, Hyderabad, Telangana 500029",
+  landmark: "Near CPI Party Office / Urdu Hall Lane",
+  timings: "Monday – Sunday: 11:00 AM – 11:00 PM",
+  phone: "+91 40 2322 4589",
+  phoneRaw: "+914023224589",
+  email: "hello@mirosacafe.in",
+  costForTwo: "₹1,200 approx. for two",
+  zomatoUrl: "https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar",
+  swiggyUrl: "https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831",
+  googleMapsUrl: "https://maps.google.com/?q=Mirosa+Cafe+%26+Kitchen+Himayatnagar+Hyderabad",
+  googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1352467332215!2d78.48421887516538!3d17.405373883486167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99dc462d109f%3A0x7d94562095f68b5e!2sMirosa%20Cafe%20%26%20Kitchen!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin",
+  announcement: {
+    active: true,
+    text: "✨ Welcome to Mirosa Himayat Nagar · Dine-in, Takeaway & Delivery via Swiggy & Zomato · Open daily 11 AM – 11 PM",
+    badge: "Now Serving"
+  }
+};
+
+export const MENU_CATEGORIES = [
+  { id: "all", label: "All Offerings", count: 24, icon: "sparkles" },
+  { id: "starters", label: "Small Plates & Starters", count: 4, icon: "utensils" },
+  { id: "mains", label: "Signature Mains & Bowls", count: 4, icon: "bowl" },
+  { id: "pizza", label: "Puff Pastry Pizzas", count: 3, icon: "pizza" },
+  { id: "burgers", label: "Gourmet Burgers", count: 3, icon: "burger" },
+  { id: "pasta", label: "Handcrafted Pastas", count: 3, icon: "pasta" },
+  { id: "coffee", label: "Specialty Coffee & Brews", count: 3, icon: "coffee" },
+  { id: "bakery", label: "Boutique Bakery & Desserts", count: 4, icon: "cake" },
+  { id: "mocktails", label: "Artisanal Mocktails", count: 3, icon: "cocktail" }
+];
+
+export const INITIAL_MENU_ITEMS = [
+  {
+    id: "mirosa-cilantro-chicken",
+    name: "Cilantro Grilled Chicken",
+    category: "mains",
+    price: 520,
+    isVeg: false,
+    isChefSpecial: true,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Tender flame-grilled chicken supreme infused with fragrant cilantro lime marinade, roasted baby carrots, charred Meyer lemon, and silky garlic herb purée.",
+    dietary: ["Chef's Signature", "High Protein", "Gluten-Conscious"],
+    calories: "540 kcal",
+    image: "/assets/images/cilantro-chicken.jpg"
+  },
+  {
+    id: "mirosa-truffle-mushroom-pizza",
+    name: "Truffle Mushroom Puff Pizza",
+    category: "pizza",
+    price: 480,
+    isVeg: true,
+    isChefSpecial: true,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Mirosa's signature flaky all-butter laminated puff pastry crust layered with roasted wild cremini, fior di latte mozzarella, black truffle drizzle, and peppery wild rocket.",
+    dietary: ["Signature Puff Base", "Vegetarian", "Chef's Special"],
+    calories: "620 kcal",
+    image: "/assets/images/puff-pizza.jpg"
+  },
+  {
+    id: "mirosa-pistachio-croissant-wheel",
+    name: "Viral Pistachio Supreme Wheel",
+    category: "bakery",
+    price: 320,
+    isVeg: true,
+    isChefSpecial: true,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Crispy circular laminated Viennoiserie filled with rich Sicilian pistachio pastry creme, dipped in creamy white chocolate glaze and dusted with roasted Iranian pistachios.",
+    dietary: ["House-Baked Daily", "Viral Sensation", "Vegetarian"],
+    calories: "480 kcal",
+    image: "/assets/images/pastries-bakery.jpg"
+  },
+  {
+    id: "mirosa-signature-burger",
+    name: "The Mirosa Truffle Smash Burger",
+    category: "burgers",
+    price: 480,
+    isVeg: false,
+    isChefSpecial: true,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Two prime smashed patties with melted aged sharp cheddar, caramelized balsamic red onions, crisp butterhead lettuce, heirloom tomato, and black truffle aioli in a toasted brioche bun with herb-dusted parmesan fries.",
+    dietary: ["Bestseller", "Includes Truffle Fries"],
+    calories: "780 kcal",
+    image: "/assets/images/gourmet-burger.jpg"
+  },
+  {
+    id: "mirosa-hazelnut-frappe",
+    name: "Artisanal Hazelnut Frappe",
+    category: "coffee",
+    price: 290,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Double-shot espresso blended with rich Piedmont hazelnut praline, velvety whole milk, topped with cloud-like whipped cream, salted caramel ribbon, and toasted hazelnut crunch.",
+    dietary: ["Most Loved Beverage", "Vegetarian"],
+    calories: "320 kcal",
+    image: "/assets/images/specialty-coffee.jpg"
+  },
+  {
+    id: "mirosa-passionfruit-cooler",
+    name: "Passionfruit & Mint Sparkler",
+    category: "mocktails",
+    price: 260,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: true,
+    isAvailable: true,
+    description: "Fresh passionfruit pulp, muddled Egyptian garden mint, ruby pomegranate pearls, and sparkling citrus tonic poured over crystal crushed ice with dehydrated orange wheel.",
+    dietary: ["Refreshing", "Vegan", "Hydrating"],
+    calories: "140 kcal",
+    image: "/assets/images/signature-mocktail.jpg"
+  },
+  {
+    id: "mirosa-burrata-bruschetta",
+    name: "Heirloom Tomato & Burrata Toast",
+    category: "starters",
+    price: 390,
+    isVeg: true,
+    isChefSpecial: true,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Artisanal toasted sourdough topped with creamy pugliese burrata, marinated cherry heirloom tomatoes, fresh Genovese basil, cold-pressed olive oil, and 12-year aged Modena balsamic glaze.",
+    dietary: ["Artisanal Bread", "Vegetarian"],
+    calories: "360 kcal",
+    image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-truffle-parmesan-fries",
+    name: "Hand-Cut Truffle Parmesan Fries",
+    category: "starters",
+    price: 280,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Crispy double-cooked potato batons tossed in aromatic Italian white truffle oil, 24-month aged Parmigiano Reggiano snow, and fresh flat-leaf parsley, served with house garlic herb dip.",
+    dietary: ["Vegetarian", "Crowd Favorite"],
+    calories: "410 kcal",
+    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-sticky-korean-wings",
+    name: "Gochujang Sticky Chicken Wings",
+    category: "starters",
+    price: 380,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Crispy fried chicken wings glazed with sweet and savory fermented gochujang chili, honey, toasted sesame seeds, and spring onion curls.",
+    dietary: ["Spicy & Tangy", "Poultry"],
+    calories: "490 kcal",
+    image: "https://images.unsplash.com/photo-1527477378398-180ce477b280?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-calamari-aioli",
+    name: "Salt & Pepper Crispy Calamari",
+    category: "starters",
+    price: 420,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Tender calamari flash-fried in a delicate seasoned batter, tossed with sea salt, cracked peppercorns, scallions, and served with house roasted garlic aioli.",
+    dietary: ["Seafood", "Crisp Texture"],
+    calories: "380 kcal",
+    image: "https://images.unsplash.com/photo-1604909052743-94e838986d24?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-butter-chicken-bowl",
+    name: "Mirosa Butter Chicken Bowl",
+    category: "mains",
+    price: 490,
+    isVeg: false,
+    isChefSpecial: true,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Smoked tandoori chicken tikka simmered in a velvety makhani gravy infused with kasuri methi, served over fragrant jeera basmati rice with garlic naan crisps and pickled shallots.",
+    dietary: ["Comfort Classic", "Popular"],
+    calories: "680 kcal",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-fish-and-chips",
+    name: "Crispy English Fish & Chips",
+    category: "mains",
+    price: 540,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Flaky golden beer-battered river sole fillet served with thick-cut steak fries, minted green pea purée, house caper tartar sauce, and malt vinegar drizzle.",
+    dietary: ["Seafood", "Classic British"],
+    calories: "690 kcal",
+    image: "https://images.unsplash.com/photo-1579208030886-b937da0925dc?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-paneer-steak",
+    name: "Herb Crusted Paneer Steak",
+    category: "mains",
+    price: 450,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Pan-roasted cottage cheese steak marinated in fresh garden herbs, served over Mediterranean ratatouille, organic tri-color quinoa, and roasted tomato coulis.",
+    dietary: ["Vegetarian", "Healthy Choice"],
+    calories: "460 kcal",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-peri-peri-chicken-pizza",
+    name: "Peri Peri Smoked Chicken Puff Pizza",
+    category: "pizza",
+    price: 520,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Crispy puff pastry base loaded with house peri peri spiced pulled chicken, smoked scamorza cheese, pickled jalapenos, red bell peppers, and fresh cilantro.",
+    dietary: ["Zesty & Smoky", "Non-Vegetarian"],
+    calories: "640 kcal",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-margherita-bufala",
+    name: "Margherita di Bufala Puff Pizza",
+    category: "pizza",
+    price: 420,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Crushed San Marzano tomato sauce, fresh buffalo mozzarella medallions, torn sweet basil leaves, and cold-pressed extra virgin olive oil on flaky golden pastry.",
+    dietary: ["Vegetarian", "Classic Italian"],
+    calories: "560 kcal",
+    image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-crispy-chicken-burger",
+    name: "Crispy Panko Buttermilk Chicken Burger",
+    category: "burgers",
+    price: 440,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Buttermilk marinated chicken breast dredged in seasoned panko crumbs, spicy pickled slaw, chipotle ranch, and dill pickles in a toasted butter brioche bun.",
+    dietary: ["Crunchy & Juicy", "Non-Vegetarian"],
+    calories: "710 kcal",
+    image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-paneer-burger",
+    name: "Charred Cottage Cheese & Guacamole Burger",
+    category: "burgers",
+    price: 390,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Char-grilled spiced paneer patty, freshly whipped avocado guacamole, sun-dried tomato relish, arugula, and smoked gouda in a soft brioche bun.",
+    dietary: ["Vegetarian", "Rich in Good Fats"],
+    calories: "590 kcal",
+    image: "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-pesto-pasta",
+    name: "Creamy Pesto Genovese Penne",
+    category: "pasta",
+    price: 460,
+    isVeg: true,
+    isChefSpecial: true,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Al dente penne rigate folded in sweet basil and toasted pine nut pesto cream, topped with torn baby bocconcini, toasted almonds, and semi-dried cherry tomatoes.",
+    dietary: ["Vegetarian", "Nutty & Herbaceous"],
+    calories: "580 kcal",
+    image: "https://images.unsplash.com/photo-1621996346565-e3d5d6281788?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-chicken-ragu",
+    name: "Slow-Braised Chicken Ragù Pappardelle",
+    category: "pasta",
+    price: 510,
+    isVeg: false,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Handcrafted wide ribbon pasta tossed in a 6-hour slow-cooked shredded chicken, rosemary, and San Marzano tomato ragù, finished with aged pecorino romano.",
+    dietary: ["Handmade Pasta", "Non-Vegetarian"],
+    calories: "620 kcal",
+    image: "https://images.unsplash.com/photo-1556761223-4c4282c73f77?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-aglio-olio",
+    name: "Spaghetti Aglio Olio e Peperoncino",
+    category: "pasta",
+    price: 410,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Classic Neapolitan spaghetti tossed in slivered garlic, Calabrian chili flakes, fresh Italian parsley, Kalamata olives, and Tuscan extra virgin olive oil.",
+    dietary: ["Vegetarian", "Vegan Adaptable"],
+    calories: "450 kcal",
+    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-cortado",
+    name: "Classic Cortado",
+    category: "coffee",
+    price: 210,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Equal parts double ristretto extraction from our custom roasted Arabica blend and silky textured warm milk, served in an authentic Spanish Gibraltar glass.",
+    dietary: ["Specialty Coffee", "Vegetarian"],
+    calories: "70 kcal",
+    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-biscoff-latte",
+    name: "Lotus Biscoff Iced Latte",
+    category: "coffee",
+    price: 310,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Creamy espresso over ice, churned with caramelized Belgian speculoos cookie butter, milk, and topped with crunchy Biscoff biscuit crumble.",
+    dietary: ["Sweet & Spiced", "Vegetarian"],
+    calories: "340 kcal",
+    image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-french-toast",
+    name: "Nutella Brioche French Toast",
+    category: "bakery",
+    price: 360,
+    isVeg: true,
+    isChefSpecial: true,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Thick-cut golden brioche soaked in vanilla bean custard, pan-crisped in Normandy butter, smothered with hazelnut Nutella, wild blueberry coulis, and fresh banana slices.",
+    dietary: ["Decadent", "Vegetarian"],
+    calories: "580 kcal",
+    image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-burnt-cheesecake",
+    name: "Basque Burnt Cheesecake",
+    category: "bakery",
+    price: 340,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Caramelized deeply browned top with an ultra-creamy, custard-soft molten center, paired with house wild berry compote and sea salt flakes.",
+    dietary: ["House Specialty", "Vegetarian"],
+    calories: "450 kcal",
+    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "mirosa-hibiscus-tea",
+    name: "Wild Hibiscus Berry Iced Tea",
+    category: "mocktails",
+    price: 240,
+    isVeg: true,
+    isChefSpecial: false,
+    isFeatured: false,
+    isAvailable: true,
+    description: "Cold-steeped organic Egyptian hibiscus flowers infused with crushed wild berries, kaffir lime, and wildflower honey over clear ice spheres.",
+    dietary: ["Antioxidant Rich", "Vegan"],
+    calories: "90 kcal",
+    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=800&auto=format&fit=crop"
+  }
+];
+
+export const GALLERY_ITEMS = [
+  {
+    id: 1,
+    title: "Mirosa Cafe Ambience",
+    category: "interior",
+    description: "Sunlit dining hall with warm ivory walls, terracotta banquettes, and ambient golden pendant lights in Himayat Nagar.",
+    image: "/assets/images/cafe-ambience.jpg",
+    span: "col-span-2 row-span-2"
+  },
+  {
+    id: 2,
+    title: "Artisanal Table Setting",
+    category: "food",
+    description: "Morning ritual with fresh Viennoiserie, signature hazelnut coffee, and handcrafted pasta.",
+    image: "/assets/images/hero-dining.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 3,
+    title: "Viennoiserie & Bakery Display",
+    category: "food",
+    description: "Viral pistachio supreme croissant wheels, babka, and golden all-butter croissants baked fresh daily.",
+    image: "/assets/images/pastries-bakery.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 4,
+    title: "Cilantro Grilled Chicken Supreme",
+    category: "food",
+    description: "Flame-grilled chicken breast with herb butter emulsion and charred baby carrots on handmade stoneware.",
+    image: "/assets/images/cilantro-chicken.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 5,
+    title: "Specialty Iced Frappe",
+    category: "coffee",
+    description: "Signature hazelnut frappe with roasted hazelnuts and espresso on travertine stone.",
+    image: "/assets/images/specialty-coffee.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 6,
+    title: "Puff Pastry Wild Mushroom Pizza",
+    category: "food",
+    description: "Laminated buttery puff crust topped with foraged mushrooms, fior di latte, and truffle glaze.",
+    image: "/assets/images/puff-pizza.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 7,
+    title: "The Mirosa Truffle Smash Burger",
+    category: "food",
+    description: "Aged sharp cheddar, caramelized balsamic onions, and truffle fries on slate.",
+    image: "/assets/images/gourmet-burger.jpg",
+    span: "col-span-1"
+  },
+  {
+    id: 8,
+    title: "Passionfruit & Mint Sparkler",
+    category: "drinks",
+    description: "Refreshing layered cooler on the sunlit terrace with crushed ice and citrus.",
+    image: "/assets/images/signature-mocktail.jpg",
+    span: "col-span-2"
+  }
+];
+
+export const INITIAL_RESERVATIONS = [
+  {
+    id: "MRS-2401",
+    name: "Arjun Venkat",
+    phone: "+91 98490 12345",
+    email: "arjun.v@gmail.com",
+    date: "2026-10-16",
+    time: "20:00",
+    guests: "4",
+    occasion: "Anniversary Celebration",
+    status: "Confirmed",
+    notes: "Prefers corner banquette table with ambient lighting.",
+    createdAt: "2026-10-14 11:30"
+  },
+  {
+    id: "MRS-2402",
+    name: "Pooja Reddy",
+    phone: "+91 97011 88442",
+    email: "pooja.reddy@outlook.com",
+    date: "2026-10-17",
+    time: "16:30",
+    guests: "2",
+    occasion: "Coffee & Pastries Date",
+    status: "Confirmed",
+    notes: "High tea and pistachio croissant wheel pre-order.",
+    createdAt: "2026-10-14 14:15"
+  }
+];

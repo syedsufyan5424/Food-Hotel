@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirosa Cafe & Kitchen | Artisanal Dining & Specialty Coffee | Himayat Nagar, Hyderabad</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover Mirosa Cafe & Kitchen in Himayat Nagar, Hyderabad. Thoughtfully prepared artisanal food, specialty coffee, handcrafted puff pastry pizzas, viral pistachio croissant wheels, and warm contemporary dining. Order on Swiggy and Zomato or reserve your table." />
+  <meta name="keywords" content="Mirosa Cafe, Mirosa Cafe and Kitchen, Himayat Nagar cafe, Hyderabad cafes, specialty coffee Hyderabad, pistachio croissant wheel, brunch Himayat Nagar, Italian food Hyderabad, Swiggy Mirosa, Zomato Mirosa" />
+  <meta name="author" content="Mirosa Cafe & Kitchen" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:title" content="Mirosa Cafe & Kitchen — Himayat Nagar, Hyderabad" />
+  <meta property="og:description" content="An experience worth savoring. Handcrafted bistro dishes, viral Viennoiserie, and single-origin brews in a cozy, aesthetic sanctuary." />
+  <meta property="og:image" content="/assets/images/hero-dining.jpg" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/variables.css" />
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/layout.css" />
+  <link rel="stylesheet" href="/src/css/admin.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside id="announcement-bar" class="announcement-bar" aria-label="Announcement">
+    <div class="announcement-content">
+      <span class="announcement-badge">Now Serving</span>
+      <span id="announcement-text">✨ Welcome to Mirosa Himayat Nagar · Dine-in, Takeaway & Delivery via Swiggy & Zomato · Open daily 11 AM – 11 PM</span>
+    </div>
+    <button id="announcement-close" class="announcement-close" aria-label="Dismiss Announcement">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       PREMIUM NAVIGATION HEADER
+       ========================================================================== -->
+  <header id="site-header" class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-wordmark" aria-label="Mirosa Cafe & Kitchen Home">
+        <span class="brand-title">MIROSA</span>
+        <span class="brand-subtitle">CAFÉ & KITCHEN · HYDERABAD</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Our Menu</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#gallery" class="nav-link">Atmosphere</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Visit Us</a>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="nav-actions">
+        <a href="#reservations" class="btn btn-sm btn-nav-reserve">Reserve Table</a>
+        <button class="btn btn-primary btn-sm trigger-order-modal">Order Online</button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-nav-toggle" class="nav-toggle" aria-label="Toggle Mobile Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER NAVIGATION
+       ========================================================================== -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <div class="brand-wordmark">
+          <span class="brand-title" style="color: var(--text-primary); font-size: 1.5rem;">MIROSA</span>
+          <span class="brand-subtitle" style="color: var(--color-terracotta);">CAFÉ & KITCHEN</span>
+        </div>
+        <button id="mobile-drawer-close" class="modal-close-btn" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-links">
+        <a href="#home" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="#menu" class="mobile-nav-link">Our Menu <span>&rarr;</span></a>
+        <a href="#story" class="mobile-nav-link">Our Story <span>&rarr;</span></a>
+        <a href="#gallery" class="mobile-nav-link">Atmosphere & Gallery <span>&rarr;</span></a>
+        <a href="#experience" class="mobile-nav-link">Our Experience <span>&rarr;</span></a>
+        <a href="#contact" class="mobile-nav-link">Location & Timings <span>&rarr;</span></a>
+      </nav>
+
+      <div class="mobile-drawer-actions">
+        <a href="#reservations" class="btn btn-outline btn-md" style="width: 100%;">Book a Table</a>
+        <button class="btn btn-primary btn-md trigger-order-modal" style="width: 100%;">Order on Swiggy / Zomato</button>
+      </div>
+
+      <div style="margin-top: 1.5rem; font-size: 0.8125rem; color: var(--text-muted); text-align: center;">
+        Himayat Nagar, Hyderabad · 11 AM – 11 PM
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         CINEMATIC HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <img src="/assets/images/hero-dining.jpg" alt="Mirosa Cafe table setting with latte art, viral pistachio pastry wheel and gourmet dishes" />
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span>Himayat Nagar · Hyderabad</span>
+        </div>
+
+        <h1 class="hero-headline">An Experience Worth Savoring.</h1>
+
+        <p class="hero-subtitle">
+          Thoughtfully prepared food, delightful flavors and moments worth sharing. Discover the refined comfort of Mirosa Cafe &amp; Kitchen.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary btn-lg">Explore the Menu</a>
+          <button class="btn btn-outline-light btn-lg trigger-order-modal">Order Online</button>
+          <a href="#reservations" class="btn btn-white btn-lg">Reserve a Table</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight-item">
+            <span class="hero-highlight-icon">✦</span>
+            <span>Artisanal Coffee &amp; Viennoiserie</span>
+          </div>
+          <div class="hero-highlight-item">
+            <span class="hero-highlight-icon">✦</span>
+            <span>Valet Parking Available</span>
+          </div>
+          <div class="hero-highlight-item">
+            <span class="hero-highlight-icon">✦</span>
+            <span>Open Daily 11:00 AM – 11:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <span>Scroll to Discover</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SIGNATURE INTRODUCTION (BRAND STORY)
+         ========================================================================== -->
+    <section id="story" class="section-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media-wrap">
+            <img src="/assets/images/cafe-ambience.jpg" alt="Warm interior dining area at Mirosa Cafe Himayat Nagar" class="story-main-img" loading="lazy" />
+            <div class="story-badge-floating">
+              <div class="story-badge-num">4.2★</div>
+              <div class="story-badge-text">Beloved culinary destination for food lovers &amp; coffee aficionados in Hyderabad</div>
+            </div>
+          </div>
+
+          <div class="story-content">
+            <div class="section-eyebrow">Our Philosophy</div>
+            <h2>A Sanctuary for Slow Mornings &amp; Vibrant Evenings.</h2>
+            <p class="story-lead">
+              Nestled on Street No. 15 in Himayat Nagar, Mirosa Cafe &amp; Kitchen was envisioned as an unhurried haven where culinary craft meets serene contemporary warmth.
+            </p>
+            <p class="story-body">
+              Every detail—from the fragrant extraction of our custom-roasted Arabica espresso to our house-laminated puff pastry crusts and slow-cooked sauces—is treated with deliberate culinary passion. Whether it is a quiet workday over a hazelnut frappe, an intimate date night, or a celebration with family, Mirosa invites you to linger and taste the extraordinary.
+            </p>
+
+            <div class="story-features-list">
+              <div class="story-feat-item">
+                <div class="story-feat-icon">☕</div>
+                <div>
+                  <div class="story-feat-title">Precision Brewed Coffee</div>
+                  <div class="story-feat-desc">Single-origin beans and artisanal frappes</div>
+                </div>
+              </div>
+              <div class="story-feat-item">
+                <div class="story-feat-icon">🥐</div>
+                <div>
+                  <div class="story-feat-title">Fresh House Bakery</div>
+                  <div class="story-feat-desc">Viral pistachio wheels, babkas &amp; tarts</div>
+                </div>
+              </div>
+              <div class="story-feat-item">
+                <div class="story-feat-icon">🍕</div>
+                <div>
+                  <div class="story-feat-title">Artisan Puff Crusts</div>
+                  <div class="story-feat-desc">Crisp buttery layers with gourmet toppings</div>
+                </div>
+              </div>
+              <div class="story-feat-item">
+                <div class="story-feat-icon">🌿</div>
+                <div>
+                  <div class="story-feat-title">Warm Aesthetic Vibe</div>
+                  <div class="story-feat-desc">Ivory limewash, warm oak &amp; cozy banquettes</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a href="#menu" class="btn btn-outline btn-md">Browse Complete Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SIGNATURE MENU (FEATURED GRID)
+         ========================================================================== -->
+    <section class="section-signature">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Curated Culinary Highlights</div>
+          <h2 class="section-title">Signature Selections</h2>
+          <p class="section-description">
+            A handpicked preview of Mirosa’s most celebrated dishes, crafted with premium seasonal ingredients and presented with artistic elegance.
+          </p>
+        </div>
+
+        <div id="signature-menu-grid" class="signature-grid">
+          <!-- Dynamically populated by menu.js -->
+        </div>
+
+        <div style="text-align: center;">
+          <a href="#menu" class="btn btn-primary btn-lg">View Full Interactive Menu (24+ Items)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DISCOVER CATEGORIES
+         ========================================================================== -->
+    <section class="section-categories">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Explore Our Offerings</div>
+          <h2 class="section-title">Discover Our Menu</h2>
+          <p class="section-description">
+            Select any category to jump directly into our interactive menu filtered to your taste.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="#menu" class="category-tile" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?q=80&w=800&auto=format&fit=crop" alt="Small Plates and Starters" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Small Plates &amp; Starters</h3>
+              <span class="category-tile-count">Bruschetta, Wings, Truffle Fries &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="mains">
+            <img src="/assets/images/cilantro-chicken.jpg" alt="Signature Mains and Bowls" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Signature Mains &amp; Bowls</h3>
+              <span class="category-tile-count">Cilantro Chicken, Makhani Bowls &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="pizza">
+            <img src="/assets/images/puff-pizza.jpg" alt="Puff Pastry Pizzas" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Puff Pastry Pizzas</h3>
+              <span class="category-tile-count">Flaky Buttery Crusts &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="burgers">
+            <img src="/assets/images/gourmet-burger.jpg" alt="Gourmet Burgers" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Gourmet Burgers</h3>
+              <span class="category-tile-count">Brioche, Smashed Patties &amp; Fries &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="pasta">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281788?q=80&w=800&auto=format&fit=crop" alt="Handcrafted Pastas" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Handcrafted Pastas</h3>
+              <span class="category-tile-count">Creamy Pesto, Ragù &amp; Aglio Olio &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="coffee">
+            <img src="/assets/images/specialty-coffee.jpg" alt="Specialty Coffee" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Specialty Coffee</h3>
+              <span class="category-tile-count">Hazelnut Frappes, Cortado, Biscoff &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="bakery">
+            <img src="/assets/images/pastries-bakery.jpg" alt="Boutique Bakery and Desserts" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Bakery &amp; Desserts</h3>
+              <span class="category-tile-count">Viral Pistachio Wheels &amp; French Toast &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#menu" class="category-tile" data-category="mocktails">
+            <img src="/assets/images/signature-mocktail.jpg" alt="Artisanal Mocktails" class="category-tile-bg" loading="lazy" />
+            <div class="category-tile-overlay">
+              <h3 class="category-tile-title">Artisanal Mocktails</h3>
+              <span class="category-tile-count">Sparkling Coolers &amp; Botanicals &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ORDER FROM YOUR FAVORITE PLATFORM (SWIGGY & ZOMATO)
+         ========================================================================== -->
+    <section class="section-delivery">
+      <div class="container">
+        <div class="delivery-card-inner">
+          <div class="section-eyebrow" style="color: var(--color-gold-light);">Convenient Doorstep Delivery</div>
+          <h2 class="delivery-title">Your Mirosa Favorites, Delivered.</h2>
+          <p class="delivery-desc">
+            Choose your preferred delivery platform and enjoy our signature bistro dishes, artisan pizzas, and handcrafted frappes in the comfort of your home.
+          </p>
+
+          <div class="delivery-buttons-wrap">
+            <!-- Zomato Button -->
+            <a href="https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-zomato link-zomato" aria-label="Order on Zomato">
+              <div class="delivery-btn-icon" style="background: #FFFFFF;">
+                <span style="color: var(--color-zomato); font-size: 1.4rem; font-weight: 900; font-family: var(--font-sans);">z</span>
+              </div>
+              <div class="delivery-btn-text">
+                <span class="delivery-btn-label">Order Online Via</span>
+                <span class="delivery-btn-brand">Zomato</span>
+              </div>
+            </a>
+
+            <!-- Swiggy Button -->
+            <a href="https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-swiggy link-swiggy" aria-label="Order on Swiggy">
+              <div class="delivery-btn-icon" style="background: #FFFFFF;">
+                <span style="color: var(--color-swiggy); font-size: 1.4rem; font-weight: 900; font-family: var(--font-sans);">S</span>
+              </div>
+              <div class="delivery-btn-text">
+                <span class="delivery-btn-label">Order Online Via</span>
+                <span class="delivery-btn-brand">Swiggy</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="delivery-meta">
+            <span>✓ Fresh tamper-sealed packaging</span>
+            <span>✓ Live tracking &amp; instant dispatch</span>
+            <span>✓ Delivery within Himayat Nagar &amp; surrounding areas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         COMPLETE INTERACTIVE MENU
+         ========================================================================== -->
+    <section id="menu" class="section-full-menu">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Culinary Masterpieces</div>
+          <h2 class="section-title">The Complete Mirosa Menu</h2>
+          <p class="section-description">
+            Explore our full repertoire of bistro entrees, crisp puff pizzas, artisan burgers, handcrafted desserts, and specialty coffees.
+          </p>
+        </div>
+
+        <!-- Menu Filter Controls -->
+        <div class="menu-controls">
+          <!-- Live Search Bar -->
+          <div class="menu-search-bar">
+            <span class="menu-search-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <input type="text" id="menu-search-input" class="menu-search-input" placeholder="Search dishes (e.g. Cilantro Chicken, Truffle Pizza, Pistachio Wheel, Frappe)..." aria-label="Search Menu Dishes" />
+          </div>
+
+          <div class="menu-filters-row">
+            <!-- Category Pills -->
+            <div class="category-pills">
+              <button class="category-pill active" data-category="all">All</button>
+              <button class="category-pill" data-category="starters">Starters</button>
+              <button class="category-pill" data-category="mains">Mains &amp; Bowls</button>
+              <button class="category-pill" data-category="pizza">Puff Pizzas</button>
+              <button class="category-pill" data-category="burgers">Burgers</button>
+              <button class="category-pill" data-category="pasta">Pastas</button>
+              <button class="category-pill" data-category="coffee">Specialty Coffee</button>
+              <button class="category-pill" data-category="bakery">Bakery &amp; Desserts</button>
+              <button class="category-pill" data-category="mocktails">Mocktails</button>
+            </div>
+
+            <!-- Dietary Toggles & Sort -->
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+              <div class="diet-toggles">
+                <button class="diet-toggle-btn active" data-diet="all">All</button>
+                <button class="diet-toggle-btn" data-diet="veg">
+                  <span class="diet-indicator veg" style="width: 12px; height: 12px;"></span> Veg
+                </button>
+                <button class="diet-toggle-btn" data-diet="nonveg">
+                  <span class="diet-indicator nonveg" style="width: 12px; height: 12px;"></span> Non-Veg
+                </button>
+                <button class="diet-toggle-btn" data-diet="chef">Chef's Picks</button>
+              </div>
+
+              <select id="menu-sort-select" class="form-control" style="width: auto; padding: 0.45rem 0.85rem; font-size: 0.8125rem;">
+                <option value="default">Sort: Recommended</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Menu Items Grid -->
+        <div id="full-menu-grid" class="menu-grid">
+          <!-- Populated by menu.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ATMOSPHERE & GALLERY
+         ========================================================================== -->
+    <section id="gallery" class="section-gallery">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Visual Tour</div>
+          <h2 class="section-title">Atmosphere &amp; Moments</h2>
+          <p class="section-description">
+            Step inside our light-filled dining space in Himayat Nagar. Take a glimpse at our handcrafted dishes, ambient evenings, and artisanal coffee bar.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters">
+          <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+          <button class="gallery-filter-btn" data-filter="interior">Cafe Interiors</button>
+          <button class="gallery-filter-btn" data-filter="food">Culinary Creations</button>
+          <button class="gallery-filter-btn" data-filter="coffee">Coffee &amp; Drinks</button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- Populated by gallery.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OUR EXPERIENCE (4 PILLARS)
+         ========================================================================== -->
+    <section id="experience" class="section-experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">The Mirosa Difference</div>
+          <h2 class="section-title">A Curated Dining Experience</h2>
+          <p class="section-description">
+            We believe that extraordinary dining lies in the harmony of honest flavors, serene surroundings, and intuitive hospitality.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="experience-card">
+            <div class="experience-icon">☕</div>
+            <h3 class="experience-title">Artisanal Coffee Bar</h3>
+            <p class="experience-desc">
+              Custom roasted 100% Arabica beans, calibrated water profiles, and precision extraction for our cortados, pour-overs, and signature frappes.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">🥐</div>
+            <h3 class="experience-title">Viennoiserie &amp; Bakes</h3>
+            <p class="experience-desc">
+              House-laminated puff pastry crusts, French butter croissants, and viral pistachio supreme wheels baked fresh every single morning.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">🕯️</div>
+            <h3 class="experience-title">Refined Ambiance</h3>
+            <p class="experience-desc">
+              Warm ivory limewash walls, natural oak wood textures, acoustic warmth, and ambient golden pendant lighting designed for slow conversations.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">🚗</div>
+            <h3 class="experience-title">Thoughtful Hospitality</h3>
+            <p class="experience-desc">
+              Dedicated valet parking service, accommodating dietary options (pure veg &amp; non-veg separation), and attentive table care in Himayat Nagar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TABLE RESERVATION ENQUIRY
+         ========================================================================== -->
+    <section id="reservations" class="section-reservation">
+      <div class="container">
+        <div class="reservation-container">
+          <div class="reservation-intro">
+            <div class="section-eyebrow">Book Your Experience</div>
+            <h2 class="section-title" style="text-align: left;">Reserve a Table</h2>
+            <p>
+              Planning a cozy date, a celebratory lunch, or a business meeting? Let us prepare a bespoke table for you at Mirosa Cafe &amp; Kitchen.
+            </p>
+
+            <div class="reservation-meta-box">
+              <div class="reservation-meta-title">Reservation Guidelines</div>
+              <p class="reservation-meta-text">
+                • Table holds are honored for up to 15 minutes past scheduled time.<br />
+                • Large groups (6+ guests) are recommended to book at least 24 hours in advance.<br />
+                • Our host will contact your mobile to confirm availability within 15 minutes.
+              </p>
+            </div>
+          </div>
+
+          <form id="reservation-form" class="reservation-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-name" class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" id="res-name" class="form-control" placeholder="e.g. Arjun Reddy" required />
+              </div>
+
+              <div class="form-group">
+                <label for="res-phone" class="form-label">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="res-phone" class="form-control" placeholder="e.g. +91 98490 12345" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-email" class="form-label">Email Address (Optional)</label>
+                <input type="email" id="res-email" class="form-control" placeholder="arjun@example.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="res-guests" class="form-label">Number of Guests <span class="required">*</span></label>
+                <select id="res-guests" class="form-control">
+                  <option value="1">1 Person (Solo Dining / Workspace)</option>
+                  <option value="2" selected>2 Guests (Intimate Date / Coffee)</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests (Family / Friends)</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests (Small Celebration)</option>
+                  <option value="7">7 to 10 Guests (Large Party)</option>
+                  <option value="12+">12+ Guests (Private Gathering)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date" class="form-label">Preferred Date <span class="required">*</span></label>
+                <input type="date" id="res-date" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label for="res-time" class="form-label">Preferred Time Slot <span class="required">*</span></label>
+                <select id="res-time" class="form-control">
+                  <optgroup label="Lunch Service">
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="01:00 PM" selected>01:00 PM</option>
+                    <option value="01:30 PM">01:30 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="02:30 PM">02:30 PM</option>
+                  </optgroup>
+                  <optgroup label="Afternoon &amp; High Tea">
+                    <option value="03:30 PM">03:30 PM</option>
+                    <option value="04:30 PM">04:30 PM</option>
+                    <option value="05:30 PM">05:30 PM</option>
+                    <option value="06:30 PM">06:30 PM</option>
+                  </optgroup>
+                  <optgroup label="Dinner Service">
+                    <option value="07:00 PM">07:00 PM</option>
+                    <option value="07:30 PM">07:30 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                    <option value="08:30 PM">08:30 PM</option>
+                    <option value="09:00 PM">09:00 PM</option>
+                    <option value="09:30 PM">09:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="res-occasion" class="form-label">Occasion / Seating Preference</label>
+              <select id="res-occasion" class="form-control">
+                <option value="Casual Dine-in">Casual Dine-in</option>
+                <option value="Birthday Celebration">Birthday Celebration (Complimentary Candle)</option>
+                <option value="Anniversary Date">Anniversary Date (Corner Booth)</option>
+                <option value="Business Meeting">Business Discussion (Quiet Corner)</option>
+                <option value="High Tea &amp; Bakery">High Tea &amp; Pastries Experience</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="res-notes" class="form-label">Special Requests &amp; Dietary Requirements</label>
+              <textarea id="res-notes" class="form-control" placeholder="E.g., high chair needed, dietary allergies, quiet corner table..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Submit Reservation Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VISIT MIROSA (LOCATION & CONTACT)
+         ========================================================================== -->
+    <section id="contact" class="section-visit">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Find Your Way</div>
+          <h2 class="section-title">Visit Mirosa in Himayat Nagar</h2>
+          <p class="section-description">
+            Conveniently located in the heart of Hyderabad, welcoming you every day from 11:00 AM to 11:00 PM.
+          </p>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-info">
+            <div class="visit-info-cards">
+              <div class="visit-card">
+                <div class="visit-card-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Our Address
+                </div>
+                <div class="visit-card-text">
+                  3-6-236/2, Street No. 15, AP State Housing Board, Himayatnagar, Hyderabad, Telangana 500029
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 6px;">
+                  Landmark: Near CPI Party Office / Urdu Hall Lane
+                </div>
+              </div>
+
+              <div class="visit-card">
+                <div class="visit-card-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Opening Hours
+                </div>
+                <div class="visit-card-text info-timings-text">
+                  Monday – Sunday: 11:00 AM – 11:00 PM
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--color-veg); font-weight: 600; margin-top: 6px;">
+                  ● Open All 7 Days
+                </div>
+              </div>
+
+              <div class="visit-card">
+                <div class="visit-card-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Telephone &amp; Enquiries
+                </div>
+                <div class="visit-card-text">
+                  <a href="tel:+914023224589" class="info-phone-link info-phone-text" style="color: var(--color-terracotta); font-weight: 600;">+91 40 2322 4589</a>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 6px;">
+                  General inquiries &amp; large table reservations
+                </div>
+              </div>
+
+              <div class="visit-card">
+                <div class="visit-card-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  Parking &amp; Amenities
+                </div>
+                <div class="visit-card-text">
+                  Valet Parking Service
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 6px;">
+                  High-speed guest Wi-Fi, air-conditioned seating
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://maps.google.com/?q=Mirosa+Cafe+%26+Kitchen+Himayatnagar+Hyderabad" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md">
+                Get Directions in Google Maps &rarr;
+              </a>
+              <a href="tel:+914023224589" class="btn btn-outline btn-md info-phone-link">
+                Call Restaurant Directly
+              </a>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="visit-map-wrap">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1352467332215!2d78.48421887516538!3d17.405373883486167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99dc462d109f%3A0x7d94562095f68b5e!2sMirosa%20Cafe%20%26%20Kitchen!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin" 
+              title="Mirosa Cafe &amp; Kitchen Location Map" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-wordmark">
+            <span class="brand-title">MIROSA</span>
+            <span class="brand-subtitle" style="color: var(--color-gold);">CAFÉ &amp; KITCHEN</span>
+          </a>
+          <p>
+            An artisanal dining sanctuary combining contemporary culinary sophistication, specialty coffee craft, and heartfelt Hyderabadi hospitality.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 10px;">
+            <a href="https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar" target="_blank" rel="noopener noreferrer" class="btn btn-zomato btn-sm link-zomato">Zomato</a>
+            <a href="https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831" target="_blank" rel="noopener noreferrer" class="btn btn-swiggy btn-sm link-swiggy">Swiggy</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#menu" class="footer-link">Our Full Menu</a></li>
+            <li><a href="#story" class="footer-link">Our Story &amp; Craft</a></li>
+            <li><a href="#gallery" class="footer-link">Atmosphere &amp; Gallery</a></li>
+            <li><a href="#experience" class="footer-link">Our Experience</a></li>
+            <li><a href="#reservations" class="footer-link">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Visit Us</h4>
+          <ul class="footer-links">
+            <li class="footer-link">3-6-236/2, Street No. 15, AP Housing Board</li>
+            <li class="footer-link">Himayat Nagar, Hyderabad 500029</li>
+            <li class="footer-link">Near CPI Party Office</li>
+            <li class="footer-link"><a href="tel:+914023224589" class="info-phone-link info-phone-text" style="color: var(--color-gold);">+91 40 2322 4589</a></li>
+            <li class="footer-link info-timings-text">Open Daily: 11 AM – 11 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Staff &amp; Management</h4>
+          <p style="font-size: 0.84rem; color: var(--text-light-muted); margin-bottom: 1rem;">
+            Authorized restaurant staff can manage live menu items, update prices, manage table enquiries, and edit delivery links.
+          </p>
+          <button class="btn btn-outline-light btn-sm open-admin-btn" style="border-color: rgba(255,255,255,0.25);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Staff Portal Login
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Mirosa Cafe &amp; Kitchen. All rights reserved.
+          <div class="footer-disclaimer">
+            Himayat Nagar, Hyderabad, Telangana · Verified listing URLs configured for Swiggy and Zomato.
+          </div>
+        </div>
+        <div>
+          <a href="#admin" class="open-admin-btn" style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">Admin Access (PIN: 2024)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE STICKY ORDERING BAR
+       ========================================================================== -->
+  <div class="mobile-sticky-bar" aria-label="Quick Actions">
+    <div class="mobile-sticky-inner">
+      <a href="#menu" class="btn btn-outline btn-sm" style="flex: 1;">Menu</a>
+      <a href="#reservations" class="btn btn-outline btn-sm" style="flex: 1;">Reserve</a>
+      <button class="btn btn-primary btn-sm trigger-order-modal" style="flex: 1.5;">Order Online</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DISH DETAIL MODAL
+       ========================================================================== -->
+  <div id="dish-detail-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="dish-modal-content">
+        <!-- Injected by menu.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GALLERY LIGHTBOX MODAL
+       ========================================================================== -->
+  <div id="gallery-lightbox-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" style="padding: 0;">
+    <button id="lightbox-close-btn" class="modal-close-btn" style="top: 24px; right: 24px; width: 44px; height: 44px;" aria-label="Close Lightbox">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    
+    <div style="max-width: 1000px; width: 92%; display: flex; flex-direction: column; align-items: center;">
+      <div style="position: relative; width: 100%; max-height: 75vh; display: flex; align-items: center; justify-content: center;">
+        <button id="lightbox-prev-btn" class="btn" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: var(--shadow-lg); color: var(--text-primary); z-index: 5;" aria-label="Previous Photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <img id="lightbox-img" src="" alt="Mirosa Gallery Photo" style="max-height: 75vh; width: auto; max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-xl); object-fit: contain;" />
+
+        <button id="lightbox-next-btn" class="btn" style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: var(--shadow-lg); color: var(--text-primary); z-index: 5;" aria-label="Next Photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div style="margin-top: 1.25rem; text-align: center; color: #FFFFFF;">
+        <h3 id="lightbox-title" style="color: #FFFFFF; font-size: 1.25rem; margin-bottom: 0.25rem;"></h3>
+        <p id="lightbox-desc" style="color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.4rem;"></p>
+        <span id="lightbox-counter" style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--color-gold); font-family: var(--font-mono);"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       RESERVATION CONFIRMATION MODAL
+       ========================================================================== -->
+  <div id="reservation-confirmation-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 2.5rem 2rem;">
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-veg-bg); color: var(--color-veg); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 2rem;">
+        ✓
+      </div>
+      <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--text-primary);">Table Enquiry Received!</h2>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+        Thank you for choosing Mirosa Cafe &amp; Kitchen. Our front-of-house team in Himayat Nagar has received your request and will call you within 15 minutes to confirm table availability.
+      </p>
+
+      <div id="res-confirmation-details">
+        <!-- Injected by reservations.js -->
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center;">
+        <button class="btn btn-primary btn-md close-res-modal" style="flex: 1;">Understood, Thank You</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DELIVERY OPTIONS MODAL
+       ========================================================================== -->
+  <div id="order-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 540px; padding: 2.25rem 2rem; text-align: center;">
+      <button class="modal-close-btn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="section-eyebrow" style="margin-bottom: 0.5rem;">Direct Doorstep Delivery</div>
+      <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Order Online</h2>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.75rem;">
+        Enjoy fresh, piping-hot dishes from Mirosa Cafe &amp; Kitchen Himayat Nagar delivered straight to your home or office.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+        <!-- Zomato option -->
+        <a href="https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-zomato link-zomato" style="justify-content: flex-start;">
+          <div class="delivery-btn-icon">
+            <span style="color: var(--color-zomato); font-size: 1.4rem; font-weight: 900;">z</span>
+          </div>
+          <div class="delivery-btn-text">
+            <span class="delivery-btn-label">Fast Delivery On</span>
+            <span class="delivery-btn-brand">Zomato</span>
+          </div>
+          <span style="margin-left: auto; font-size: 1.25rem;">&rarr;</span>
+        </a>
+
+        <!-- Swiggy option -->
+        <a href="https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-swiggy link-swiggy" style="justify-content: flex-start;">
+          <div class="delivery-btn-icon">
+            <span style="color: var(--color-swiggy); font-size: 1.4rem; font-weight: 900;">S</span>
+          </div>
+          <div class="delivery-btn-text">
+            <span class="delivery-btn-label">Track Live On</span>
+            <span class="delivery-btn-brand">Swiggy</span>
+          </div>
+          <span style="margin-left: auto; font-size: 1.25rem;">&rarr;</span>
+        </a>
+      </div>
+
+      <div style="font-size: 0.8125rem; color: var(--text-muted); background: var(--bg-secondary); padding: 0.75rem; border-radius: var(--radius-sm);">
+        📍 Outlet: 3-6-236/2, Street No. 15, Himayat Nagar, Hyderabad
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STAFF ADMIN PORTAL MODAL
+       ========================================================================== -->
+  <div id="admin-modal" class="modal-backdrop admin-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="admin-header">
+        <div class="admin-header-title">
+          <span>Staff Management Portal</span>
+          <span class="admin-badge">Secure Console</span>
+        </div>
+        <button id="admin-close-btn" class="modal-close-btn" style="position: static;" aria-label="Close Admin Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- AUTH VIEW (PIN GATE) -->
+      <div id="admin-auth-view" class="admin-auth-view">
+        <div class="admin-auth-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 style="margin-bottom: 0.5rem;">Mirosa Staff Authentication</h3>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">
+          Please enter your authorized 4-digit staff PIN code to access the restaurant control center.
+        </p>
+
+        <form id="admin-auth-form" style="margin-top: 1.5rem;">
+          <input type="password" id="admin-pin-input" class="form-control" style="max-width: 200px; margin: 0 auto; text-align: center; font-size: 1.5rem; letter-spacing: 0.3em; font-family: var(--font-mono);" maxlength="6" placeholder="••••" required />
+          <div id="admin-auth-error" style="color: var(--color-nonveg); font-size: 0.8125rem; margin-top: 0.5rem; display: none;"></div>
+          <button type="submit" class="btn btn-primary btn-md" style="margin-top: 1rem; width: 200px;">Unlock Console</button>
+        </form>
+
+        <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+          Demo Staff PIN: <strong>2024</strong>
+        </div>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <div id="admin-dashboard-view" style="display: none;">
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="menu">Menu Management</button>
+          <button class="admin-tab-btn" data-tab="reservations">Table Enquiries</button>
+          <button class="admin-tab-btn" data-tab="settings">Store Info &amp; Links</button>
+        </div>
+
+        <div class="admin-body">
+          <!-- PANEL 1: MENU MANAGEMENT -->
+          <div id="admin-panel-menu" class="admin-view-panel active">
+            <div class="admin-actions-bar">
+              <div>
+                <strong>Active Menu Catalog</strong>
+                <div style="font-size: 0.8125rem; color: var(--text-muted);">Update pricing, stock availability, and featured homepage items.</div>
+              </div>
+              <button id="admin-btn-add-item" class="btn btn-primary btn-sm">+ Add New Dish</button>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Dish Details</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Homepage</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-menu-tbody">
+                  <!-- Injected by admin.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- PANEL 2: RESERVATIONS ENQUIRIES -->
+          <div id="admin-panel-reservations" class="admin-view-panel">
+            <div class="admin-actions-bar">
+              <div>
+                <strong>Customer Table Reservations</strong>
+                <div style="font-size: 0.8125rem; color: var(--text-muted);">Live enquiries submitted via the booking form.</div>
+              </div>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ref ID</th>
+                    <th>Customer</th>
+                    <th>Date &amp; Time</th>
+                    <th>Party</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-reservations-tbody">
+                  <!-- Injected by admin.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- PANEL 3: SETTINGS -->
+          <div id="admin-panel-settings" class="admin-view-panel">
+            <form id="admin-settings-form">
+              <div class="admin-settings-card">
+                <div class="admin-settings-title">Top Announcement Banner</div>
+                <div class="form-group">
+                  <label style="display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer;">
+                    <input type="checkbox" id="set-banner-active" />
+                    <span>Show Announcement Bar on Website</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label for="set-banner-text" class="form-label">Banner Message</label>
+                  <input type="text" id="set-banner-text" class="form-control" />
+                </div>
+              </div>
+
+              <div class="admin-settings-card">
+                <div class="admin-settings-title">Delivery Aggregator URLs</div>
+                <div class="form-group">
+                  <label for="set-zomato" class="form-label">Zomato Listing Link</label>
+                  <input type="url" id="set-zomato" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="set-swiggy" class="form-label">Swiggy Listing Link</label>
+                  <input type="url" id="set-swiggy" class="form-control" />
+                </div>
+              </div>
+
+              <div class="admin-settings-card">
+                <div class="admin-settings-title">Contact &amp; Operations</div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="set-phone" class="form-label">Telephone Number</label>
+                    <input type="text" id="set-phone" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="set-hours" class="form-label">Opening Timings</label>
+                    <input type="text" id="set-hours" class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <button type="submit" class="btn btn-primary btn-md">Save Changes</button>
+                <button type="button" id="admin-btn-reset-defaults" class="btn btn-outline btn-sm" style="color: var(--color-nonveg);">Reset to Factory Defaults</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div style="padding: 1rem 2rem; background: var(--bg-card-warm); border-top: 1px solid var(--border-medium); display: flex; justify-content: flex-end;">
+          <button id="admin-btn-logout" class="btn btn-outline btn-sm">Lock / Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DISH EDIT MODAL (FOR STAFF)
+       ========================================================================== -->
+  <div id="admin-item-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 580px; padding: 2rem;">
+      <h3 id="admin-item-modal-title" style="margin-bottom: 1.25rem;">Edit Menu Item</h3>
+      <form id="admin-item-form">
+        <div class="form-group">
+          <label for="item-name" class="form-label">Dish Name <span class="required">*</span></label>
+          <input type="text" id="item-name" class="form-control" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="item-category" class="form-label">Category</label>
+            <select id="item-category" class="form-control">
+              <option value="starters">Small Plates &amp; Starters</option>
+              <option value="mains">Signature Mains &amp; Bowls</option>
+              <option value="pizza">Puff Pastry Pizzas</option>
+              <option value="burgers">Gourmet Burgers</option>
+              <option value="pasta">Handcrafted Pastas</option>
+              <option value="coffee">Specialty Coffee &amp; Brews</option>
+              <option value="bakery">Boutique Bakery &amp; Desserts</option>
+              <option value="mocktails">Artisanal Mocktails</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="item-price" class="form-label">Price in INR (₹) <span class="required">*</span></label>
+            <input type="number" id="item-price" class="form-control" required min="10" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="item-diet" class="form-label">Dietary Classification</label>
+            <select id="item-diet" class="form-control">
+              <option value="veg">Vegetarian (Green Dot)</option>
+              <option value="nonveg">Non-Vegetarian (Red Triangle)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="item-image" class="form-label">Image URL / Path</label>
+            <input type="text" id="item-image" class="form-control" placeholder="/assets/images/..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="item-desc" class="form-label">Description</label>
+          <textarea id="item-desc" class="form-control" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="item-dietary-tags" class="form-label">Dietary / Allergen Tags (comma-separated)</label>
+          <input type="text" id="item-dietary-tags" class="form-control" placeholder="E.g., Chef's Special, House-Baked, Contains Nuts" />
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <label style="display: flex; align-items: center; gap: 6px; font-size: 0.875rem; cursor: pointer;">
+            <input type="checkbox" id="item-chef-special" />
+            <span>Chef's Special</span>
+          </label>
+          <label style="display: flex; align-items: center; gap: 6px; font-size: 0.875rem; cursor: pointer;">
+            <input type="checkbox" id="item-featured" />
+            <span>Feature on Homepage</span>
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button type="button" class="btn btn-outline btn-md" onclick="document.getElementById('admin-item-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-md">Save Dish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

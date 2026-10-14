@@ -1,0 +1,228 @@
+/**
+ * MIROSA CAFE & KITCHEN - STAFF ADMIN PORTAL STYLING
+ */
+
+.admin-modal .modal-dialog {
+  max-width: 960px;
+  width: 95%;
+  background: #FFFFFF;
+}
+
+.admin-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card-warm);
+}
+
+.admin-header-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-badge {
+  background: var(--color-terracotta-light);
+  color: var(--color-terracotta);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* AUTH PIN GATE */
+.admin-auth-view {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.admin-auth-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-terracotta-light);
+  color: var(--color-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.pin-input-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.pin-digit-input {
+  width: 48px;
+  height: 56px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+.pin-digit-input:focus {
+  border-color: var(--color-terracotta);
+  outline: none;
+  background: #FFFFFF;
+}
+
+/* ADMIN DASHBOARD TABS */
+.admin-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-medium);
+  background: var(--bg-primary);
+  padding: 0 1.5rem;
+  overflow-x: auto;
+}
+
+.admin-tab-btn {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.admin-tab-btn:hover {
+  color: var(--color-terracotta);
+}
+.admin-tab-btn.active {
+  color: var(--color-terracotta);
+  border-bottom-color: var(--color-terracotta);
+  background: #FFFFFF;
+}
+
+.admin-body {
+  padding: 1.5rem 2rem;
+  min-height: 480px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.admin-view-panel {
+  display: none;
+}
+.admin-view-panel.active {
+  display: block;
+}
+
+/* ACTIONS BAR */
+.admin-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ADMIN TABLE */
+.admin-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.admin-table th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border-medium);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background-color: var(--bg-card-warm);
+}
+
+.admin-table-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  object-fit: cover;
+}
+
+.table-badge-active {
+  color: var(--color-veg);
+  background: var(--color-veg-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.table-badge-inactive {
+  color: var(--color-nonveg);
+  background: var(--color-nonveg-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-icon-action {
+  padding: 6px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon-action:hover {
+  color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+.btn-icon-action.delete:hover {
+  color: var(--color-nonveg);
+  border-color: var(--color-nonveg);
+}
+
+/* SETTINGS FORM */
+.admin-settings-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-settings-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
