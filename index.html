@@ -57,7 +57,7 @@
       <!-- Desktop Nav -->
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#menu" class="nav-link">Our Menu</a>
+        <a href="/menu.html" class="nav-link">Our Menu</a>
         <a href="#story" class="nav-link">Our Story</a>
         <a href="#gallery" class="nav-link">Atmosphere</a>
         <a href="#experience" class="nav-link">Experience</a>
@@ -94,7 +94,7 @@
 
       <nav class="mobile-drawer-links">
         <a href="#home" class="mobile-nav-link">Home <span>&rarr;</span></a>
-        <a href="#menu" class="mobile-nav-link">Our Menu <span>&rarr;</span></a>
+        <a href="/menu.html" class="mobile-nav-link">Our Menu <span>&rarr;</span></a>
         <a href="#story" class="mobile-nav-link">Our Story <span>&rarr;</span></a>
         <a href="#gallery" class="mobile-nav-link">Atmosphere & Gallery <span>&rarr;</span></a>
         <a href="#experience" class="mobile-nav-link">Our Experience <span>&rarr;</span></a>
@@ -135,7 +135,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#menu" class="btn btn-primary btn-lg">Explore the Menu</a>
+          <a href="/menu.html" class="btn btn-primary btn-lg">Explore Our Menu</a>
           <button class="btn btn-outline-light btn-lg trigger-order-modal">Order Online</button>
           <a href="#reservations" class="btn btn-white btn-lg">Reserve a Table</a>
         </div>
@@ -218,7 +218,7 @@
             </div>
 
             <div>
-              <a href="#menu" class="btn btn-outline btn-md">Browse Complete Menu</a>
+              <a href="/menu.html" class="btn btn-outline btn-md">Browse Complete Menu &rarr;</a>
             </div>
           </div>
         </div>
@@ -239,11 +239,11 @@
         </div>
 
         <div id="signature-menu-grid" class="signature-grid">
-          <!-- Dynamically populated by menu.js -->
+          <!-- Dynamically populated by menu.js using renderFoodCard -->
         </div>
 
-        <div style="text-align: center;">
-          <a href="#menu" class="btn btn-primary btn-lg">View Full Interactive Menu (24+ Items)</a>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="/menu.html" class="btn btn-primary btn-lg">View Full Menu (30 Dishes) &rarr;</a>
         </div>
       </div>
     </section>
@@ -257,12 +257,12 @@
           <div class="section-eyebrow">Explore Our Offerings</div>
           <h2 class="section-title">Discover Our Menu</h2>
           <p class="section-description">
-            Select any category to jump directly into our interactive menu filtered to your taste.
+            Select any category to jump directly into our dedicated interactive menu filtered to your taste.
           </p>
         </div>
 
         <div class="categories-grid" style="grid-template-columns: repeat(3, 1fr);">
-          <a href="#menu" class="category-tile" data-category="pizzas">
+          <a href="/menu.html?cat=pizzas" class="category-tile" data-category="pizzas">
             <img src="/assets/real/real-chicken-pizza.jpg" alt="Handcrafted Pizzas" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Handcrafted Pizzas</h3>
@@ -270,7 +270,7 @@
             </div>
           </a>
 
-          <a href="#menu" class="category-tile" data-category="pastas">
+          <a href="/menu.html?cat=pastas" class="category-tile" data-category="pastas">
             <img src="/assets/real/real-creamy-alfredo.jpg" alt="Handcrafted Pastas" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Artisan Pastas</h3>
@@ -278,7 +278,7 @@
             </div>
           </a>
 
-          <a href="#menu" class="category-tile" data-category="combos">
+          <a href="/menu.html?cat=combos" class="category-tile" data-category="combos">
             <img src="/assets/real/real-rice-bowl.jpg" alt="Indian Rice Combos" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Indian Combos</h3>
@@ -286,7 +286,7 @@
             </div>
           </a>
 
-          <a href="#menu" class="category-tile" data-category="salads">
+          <a href="/menu.html?cat=salads" class="category-tile" data-category="salads">
             <img src="/assets/real/real-garden-salad.jpg" alt="Fresh Salads" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Gourmet Salads</h3>
@@ -294,7 +294,7 @@
             </div>
           </a>
 
-          <a href="#menu" class="category-tile" data-category="soups">
+          <a href="/menu.html?cat=soups" class="category-tile" data-category="soups">
             <img src="/assets/real/sheet5_8.jpg" alt="Warming Soups" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Warming Soups</h3>
@@ -302,7 +302,7 @@
             </div>
           </a>
 
-          <a href="#menu" class="category-tile" data-category="sides">
+          <a href="/menu.html?cat=sides" class="category-tile" data-category="sides">
             <img src="/assets/real/real-truffle-fries.jpg" alt="Sides and Starters" class="category-tile-bg" loading="lazy" />
             <div class="category-tile-overlay">
               <h3 class="category-tile-title">Sides &amp; Bites</h3>
@@ -359,65 +359,18 @@
     </section>
 
     <!-- ==========================================================================
-         COMPLETE INTERACTIVE MENU
+         COMPLETE MENU SHOWCASE & DIRECT NAVIGATION
          ========================================================================== -->
-    <section id="menu" class="section-full-menu">
+    <section id="menu" class="section-full-menu" style="background: radial-gradient(circle at 50% 50%, rgba(194, 99, 67, 0.05), transparent 70%), var(--bg-card-warm); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); text-align: center; padding: 4.5rem 0;">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">Culinary Masterpieces</div>
-          <h2 class="section-title">The Complete Mirosa Menu</h2>
-          <p class="section-description">
-            Explore our authentic selection of handcrafted pizzas, pastas, warming soups, fresh salads, Indian rice combos, and sides.
-          </p>
-        </div>
-
-        <!-- Menu Filter Controls -->
-        <div class="menu-controls">
-          <!-- Live Search Bar -->
-          <div class="menu-search-bar">
-            <span class="menu-search-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </span>
-            <input type="text" id="menu-search-input" class="menu-search-input" placeholder="Search dishes (e.g. Margherita, Alfredo, Butter Chicken Bowl, Caesar, Broccoli Soup)..." aria-label="Search Menu Dishes" />
-          </div>
-
-          <div class="menu-filters-row">
-            <!-- Category Pills -->
-            <div class="category-pills">
-              <button class="category-pill active" data-category="all">All Offerings</button>
-              <button class="category-pill" data-category="pizzas">Pizzas</button>
-              <button class="category-pill" data-category="pastas">Pastas</button>
-              <button class="category-pill" data-category="combos">Indian Combos</button>
-              <button class="category-pill" data-category="salads">Salads</button>
-              <button class="category-pill" data-category="soups">Soups</button>
-              <button class="category-pill" data-category="sides">Sides</button>
-            </div>
-
-            <!-- Dietary Toggles & Sort -->
-            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-              <div class="diet-toggles">
-                <button class="diet-toggle-btn active" data-diet="all">All</button>
-                <button class="diet-toggle-btn" data-diet="veg">
-                  <span class="diet-indicator veg" style="width: 12px; height: 12px;"></span> Veg
-                </button>
-                <button class="diet-toggle-btn" data-diet="nonveg">
-                  <span class="diet-indicator nonveg" style="width: 12px; height: 12px;"></span> Non-Veg
-                </button>
-                <button class="diet-toggle-btn" data-diet="chef">Chef's Picks</button>
-              </div>
-
-              <select id="menu-sort-select" class="form-control" style="width: auto; padding: 0.45rem 0.85rem; font-size: 0.8125rem;">
-                <option value="default">Sort: Recommended</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dynamic Menu Items Grid -->
-        <div id="full-menu-grid" class="menu-grid">
-          <!-- Populated by menu.js -->
+        <div class="section-eyebrow">Explore Our Complete Culinary Collection</div>
+        <h2 class="section-title" style="margin-bottom: 1rem;">Looking for the Full Menu?</h2>
+        <p class="section-description" style="max-width: 620px; margin: 0 auto 2rem;">
+          From stone-baked Margherita and Quattro Formaggi pizzas to rich Alfredo pastas, velvety soups, fresh salads, and royal Indian rice bowls — explore all 30 dishes with live search, price variants, and dietary filters on our dedicated menu page.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/menu.html" class="btn btn-primary btn-lg">View Full Menu (30 Dishes) &rarr;</a>
+          <button class="btn btn-outline btn-lg trigger-order-modal">Order on Swiggy / Zomato</button>
         </div>
       </div>
     </section>
@@ -1083,11 +1036,13 @@
             <label for="item-category" class="form-label">Category</label>
             <select id="item-category" class="form-control">
               <option value="pizzas">Artisanal Pizzas</option>
-              <option value="pastas">Handcrafted Pastas</option>
-              <option value="combos">Indian Combos &amp; Bowls</option>
               <option value="salads">Fresh Gourmet Salads</option>
+              <option value="pastas">Handcrafted Pastas</option>
               <option value="soups">Velvety Soups</option>
               <option value="sides">Crisp Sides &amp; Nachos</option>
+              <option value="combos">Indian Combos &amp; Bowls</option>
+              <option value="veg-appetizers">Veg Appetizers</option>
+              <option value="nonveg-appetizers">Non-Veg Appetizers</option>
             </select>
           </div>
 

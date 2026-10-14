@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Menu | Mirosa Cafe & Kitchen | Himayat Nagar, Hyderabad</title>
+  <meta name="description" content="Explore the authentic menu of Mirosa Cafe & Kitchen, Himayat Nagar. Handcrafted artisanal pizzas, Italian pastas, velvety soups, fresh salads, and royal Indian rice bowls." />
+  <meta name="keywords" content="Mirosa Cafe menu, Hyderabad cafe, Himayat Nagar restaurants, artisan pizza Hyderabad, pasta Himayat Nagar, gourmet coffee Hyderabad" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/variables.css" />
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/layout.css" />
+  <link rel="stylesheet" href="/src/css/admin.css" />
+
+  <style>
+    .menu-page-header {
+      padding: 7.5rem 0 2.5rem;
+      background: radial-gradient(circle at 50% 20%, rgba(194, 99, 67, 0.06), transparent 70%), var(--bg-primary);
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .menu-page-eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-terracotta);
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .menu-page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 600;
+      color: var(--color-espresso);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .menu-page-subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .menu-results-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .menu-results-count {
+      font-weight: 600;
+      color: var(--color-espresso);
+    }
+    .category-pills-scroll-wrap {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+    }
+    .category-pills-scroll-wrap::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Announcement Bar -->
+  <aside id="announcement-bar" class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="container announcement-content">
+      <span class="announcement-badge">Now Serving</span>
+      <span id="announcement-text" class="announcement-text">
+        ✨ Welcome to Mirosa Himayat Nagar · Dine-in, Takeaway &amp; Delivery via Swiggy &amp; Zomato · Open daily 11 AM – 11 PM
+      </span>
+      <button id="announcement-close" class="announcement-close" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Global Header Navigation -->
+  <header id="header" class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="/" class="brand-logo" aria-label="Mirosa Cafe & Kitchen Homepage">
+        <span class="brand-title">Mirosa</span>
+        <span class="brand-subtitle">Cafe &amp; Kitchen</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" role="navigation" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/menu.html" class="nav-link active">Our Menu</a>
+        <a href="/#story" class="nav-link">Story</a>
+        <a href="/#gallery" class="nav-link">Atmosphere</a>
+        <a href="/#reserve" class="nav-link">Reserve Table</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Order Online Direct -->
+        <button class="btn btn-outline btn-sm trigger-order-modal" aria-label="Order Online on Zomato or Swiggy">
+          Order Online
+        </button>
+
+        <!-- Reserve CTA Button -->
+        <a href="/#reserve" class="btn btn-primary btn-sm btn-nav-reserve">
+          Book Table
+        </a>
+
+        <!-- Mobile Navigation Hamburger -->
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <span class="brand-title">Mirosa</span>
+      <button id="mobile-menu-close" class="btn-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/menu.html" class="mobile-nav-link active">Our Menu</a>
+      <a href="/#story" class="mobile-nav-link">Our Story</a>
+      <a href="/#gallery" class="mobile-nav-link">Atmosphere &amp; Moments</a>
+      <a href="/#reserve" class="mobile-nav-link">Reserve a Table</a>
+      <a href="/#contact" class="mobile-nav-link">Contact &amp; Hours</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="/#reserve" class="btn btn-primary btn-block btn-md">Book a Table</a>
+      <button class="btn btn-outline btn-block btn-md trigger-order-modal" style="margin-top: 0.75rem;">Order Online (Zomato / Swiggy)</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         HERO SECTION: OUR MENU
+         ========================================================================== -->
+    <section class="menu-page-header">
+      <div class="container">
+        <div class="menu-page-eyebrow">✦ Artisanal Kitchen &amp; Bistro ✦</div>
+        <h1 class="menu-page-title">Our Menu</h1>
+        <p class="menu-page-subtitle">Discover the flavors of Mirosa.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MENU SEARCH, CATEGORY TABS & FILTER BAR
+         ========================================================================== -->
+    <section class="section-full-menu" style="padding-top: 2rem;">
+      <div class="container">
+        <!-- Live Search Bar -->
+        <div class="menu-controls">
+          <div class="menu-search-bar">
+            <span class="menu-search-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <input 
+              type="text" 
+              id="menu-search-input" 
+              class="menu-search-input" 
+              placeholder="Search dishes (e.g. Margherita, Alfredo, Butter Chicken, Caesar, Broccoli Soup, Truffle Fries)..." 
+              aria-label="Search Menu Dishes" 
+            />
+          </div>
+
+          <div class="menu-filters-row">
+            <!-- Horizontally scrollable Category Navigation Pills (All 8 Categories) -->
+            <div class="category-pills-scroll-wrap">
+              <div class="category-pills">
+                <button class="category-pill active" data-category="all">All Dishes (30)</button>
+                <button class="category-pill" data-category="pizzas">Pizzas (7)</button>
+                <button class="category-pill" data-category="salads">Salads (5)</button>
+                <button class="category-pill" data-category="pastas">Pastas (5)</button>
+                <button class="category-pill" data-category="soups">Soups (5)</button>
+                <button class="category-pill" data-category="sides">Sides (3)</button>
+                <button class="category-pill" data-category="combos">Indian Combos (5)</button>
+                <button class="category-pill" data-category="veg-appetizers">Veg Appetizers</button>
+                <button class="category-pill" data-category="nonveg-appetizers">Non-Veg Appetizers</button>
+              </div>
+            </div>
+
+            <!-- Dietary Toggles & Sort Control -->
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+              <div class="diet-toggles">
+                <button class="diet-toggle-btn active" data-diet="all">All</button>
+                <button class="diet-toggle-btn" data-diet="veg">
+                  <span class="diet-indicator veg" style="width: 12px; height: 12px;"></span> Veg
+                </button>
+                <button class="diet-toggle-btn" data-diet="nonveg">
+                  <span class="diet-indicator nonveg" style="width: 12px; height: 12px;"></span> Non-Veg
+                </button>
+                <button class="diet-toggle-btn" data-diet="chef">Chef's Picks</button>
+              </div>
+
+              <select id="menu-sort-select" class="form-control" style="width: auto; padding: 0.45rem 0.85rem; font-size: 0.8125rem;">
+                <option value="default">Sort: Recommended</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Counter & Status -->
+        <div class="menu-results-bar">
+          <span id="menu-results-count" class="menu-results-count">Showing all 30 dishes</span>
+          <span style="font-size: 0.8125rem; color: var(--text-muted);">Himayat Nagar Outlet · Freshly Prepared to Order</span>
+        </div>
+
+        <!-- Responsive Grid of Food Cards -->
+        <div id="full-menu-grid" class="menu-grid">
+          <!-- Populated dynamically by menu.js using renderFoodCard -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ONLINE ORDERING SECTION
+         ========================================================================== -->
+    <section class="section-delivery" style="margin-top: 4rem;">
+      <div class="container">
+        <div class="delivery-card-inner">
+          <div class="section-eyebrow" style="color: var(--color-gold-light);">Doorstep Delivery</div>
+          <h2 class="delivery-title">Craving Mirosa at Home?</h2>
+          <p class="delivery-desc">
+            Order your favorite artisanal pizzas, handcrafted pastas, and aromatic rice bowls straight to your doorstep via verified delivery aggregators.
+          </p>
+
+          <div class="delivery-buttons-wrap">
+            <a href="https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-zomato link-zomato" aria-label="Order on Zomato">
+              <div class="delivery-btn-icon" style="background: #FFFFFF;">
+                <span style="color: var(--color-zomato); font-size: 1.4rem; font-weight: 900; font-family: var(--font-sans);">z</span>
+              </div>
+              <div class="delivery-btn-text">
+                <span class="delivery-btn-label">Order Online Via</span>
+                <span class="delivery-btn-brand">Zomato</span>
+              </div>
+            </a>
+
+            <a href="https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831" target="_blank" rel="noopener noreferrer" class="delivery-btn btn-swiggy link-swiggy" aria-label="Order on Swiggy">
+              <div class="delivery-btn-icon" style="background: #FFFFFF;">
+                <span style="color: var(--color-swiggy); font-size: 1.4rem; font-weight: 900; font-family: var(--font-sans);">S</span>
+              </div>
+              <div class="delivery-btn-text">
+                <span class="delivery-btn-label">Order Online Via</span>
+                <span class="delivery-btn-brand">Swiggy</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="delivery-meta">
+            <span>✓ Tamper-sealed packaging</span>
+            <span>✓ Real-time GPS tracking</span>
+            <span>✓ Himayat Nagar &amp; surrounding areas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       DISH DETAIL MODAL
+       ========================================================================== -->
+  <div id="dish-detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Dish Details">
+    <div class="modal-dialog modal-md">
+      <button class="modal-close-btn" aria-label="Close details modal">&times;</button>
+      <div id="dish-modal-content" class="modal-body">
+        <!-- Rendered dynamically by foodcard.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ONLINE ORDER MODAL
+       ========================================================================== -->
+  <div id="order-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Order Online">
+    <div class="modal-dialog modal-sm">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body" style="padding: 2.25rem 2rem; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🛵</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-primary); margin-bottom: 0.5rem;">Order Online</h3>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+          Select your preferred food delivery app to order directly from Mirosa Cafe &amp; Kitchen, Himayat Nagar.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 0.875rem;">
+          <a href="https://www.zomato.com/hyderabad/mirosa-cafe-kitchen-1-himayath-nagar" target="_blank" rel="noopener noreferrer" class="btn btn-zomato btn-md link-zomato" style="width: 100%; justify-content: center;">
+            Order on Zomato &rarr;
+          </a>
+          <a href="https://www.swiggy.com/city/hyderabad/mirosa-cafe-and-kitchen-sector-78-himayath-nagar-rest782831" target="_blank" rel="noopener noreferrer" class="btn btn-swiggy btn-md link-swiggy" style="width: 100%; justify-content: center;">
+            Order on Swiggy &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="brand-title" style="color: var(--color-ivory);">Mirosa</span>
+        <span class="brand-subtitle" style="color: var(--color-gold);">Cafe &amp; Kitchen</span>
+        <p class="footer-bio">
+          A bespoke culinary destination in Himayat Nagar, Hyderabad. Known for authentic artisan pizzas, handcrafted pastas, and comforting rice bowls.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu.html">Our Menu</a></li>
+          <li><a href="/#story">Our Story</a></li>
+          <li><a href="/#gallery">Atmosphere &amp; Moments</a></li>
+          <li><a href="/#reserve">Reserve a Table</a></li>
+          <li><a href="/#contact">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hours &amp; Location</h4>
+        <p style="font-size: 0.875rem; color: rgba(250, 247, 242, 0.7); line-height: 1.7; margin-bottom: 0.75rem;">
+          3-6-236/2, Street No. 15, AP State Housing Board, Himayatnagar, Hyderabad 500029
+        </p>
+        <p style="font-size: 0.875rem; color: var(--color-gold); font-weight: 600;">
+          Open Daily: 11:00 AM – 11:00 PM
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mirosa Cafe &amp; Kitchen. All rights reserved.</p>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="/#admin" class="open-admin-btn footer-admin-link">Staff Admin Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

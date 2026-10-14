@@ -4,11 +4,11 @@
 import { RESTAURANT_INFO, INITIAL_MENU_ITEMS, INITIAL_RESERVATIONS, GALLERY_ITEMS } from './data.js';
 
 const STORAGE_KEYS = {
-  MENU: 'mirosa_menu_items_v3',
-  INFO: 'mirosa_restaurant_info_v3',
-  RESERVATIONS: 'mirosa_reservations_v3',
-  GALLERY: 'mirosa_gallery_v3',
-  ADMIN_PIN: 'mirosa_admin_pin_v3'
+  MENU: 'mirosa_menu_items_v4',
+  INFO: 'mirosa_restaurant_info_v4',
+  RESERVATIONS: 'mirosa_reservations_v4',
+  GALLERY: 'mirosa_gallery_v4',
+  ADMIN_PIN: 'mirosa_admin_pin_v4'
 };
 
 const DEFAULT_PIN = '2024';

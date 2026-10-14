@@ -290,25 +290,32 @@
   color: var(--color-terracotta);
 }
 
-/* EDITORIAL FOOD CARD (Asymmetric Grid) */
+/* ==========================================================================
+   PREMIUM FOOD CARD COMPONENT (EDITORIAL STANDARD)
+   ========================================================================== */
+.food-card,
 .editorial-card {
   background: var(--bg-card);
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px -2px rgba(34, 23, 17, 0.05);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
   display: flex;
   flex-direction: column;
   position: relative;
   cursor: pointer;
-}
-.editorial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(194, 99, 67, 0.2);
+  height: 100%;
 }
 
+.food-card:hover,
+.editorial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -4px rgba(34, 23, 17, 0.12);
+  border-color: rgba(194, 99, 67, 0.3);
+}
+
+.food-card-media,
 .editorial-card-media {
   position: relative;
   width: 100%;
@@ -317,16 +324,20 @@
   background-color: var(--bg-secondary);
 }
 
+.food-card-media img,
 .editorial-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-smooth);
-}
-.editorial-card:hover .editorial-card-media img {
-  transform: scale(1.06);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.food-card:hover .food-card-media img,
+.editorial-card:hover .editorial-card-media img {
+  transform: scale(1.08);
+}
+
+.food-card-badges,
 .editorial-card-badges {
   position: absolute;
   top: 12px;
@@ -337,6 +348,23 @@
   z-index: 2;
 }
 
+.food-card-cat-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(34, 23, 17, 0.75);
+  backdrop-filter: blur(8px);
+  color: #FAF7F2;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  z-index: 2;
+}
+
+.food-card-content,
 .editorial-card-content {
   padding: 1.5rem;
   display: flex;
@@ -344,6 +372,7 @@
   flex-grow: 1;
 }
 
+.food-card-header,
 .editorial-card-header {
   display: flex;
   justify-content: space-between;
@@ -352,6 +381,7 @@
   margin-bottom: 0.5rem;
 }
 
+.food-card-title,
 .editorial-card-title {
   font-family: var(--font-serif);
   font-size: 1.25rem;
@@ -360,14 +390,48 @@
   line-height: 1.3;
 }
 
+.food-card-price {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+  white-space: nowrap;
+}
+
+.food-card-desc,
 .editorial-card-desc {
-  font-size: 0.9rem;
+  font-size: 0.8875rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.875rem;
   flex-grow: 1;
 }
 
+.food-card-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.875rem;
+}
+
+.variant-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bg-card-warm);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.food-card-served-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--color-terracotta);
+  margin-bottom: 0.875rem;
+}
+
+.food-card-footer,
 .editorial-card-footer {
   display: flex;
   justify-content: space-between;
@@ -375,6 +439,32 @@
   padding-top: 0.875rem;
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
+  gap: 0.5rem;
+}
+
+.btn-food-card-details {
+  background: var(--color-espresso);
+  color: var(--color-ivory);
+  border: 1px solid var(--color-espresso);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.food-card:hover .btn-food-card-details,
+.btn-food-card-details:hover {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  transform: translateX(2px);
 }
 
 .editorial-card-action {
@@ -388,6 +478,56 @@
 }
 .editorial-card:hover .editorial-card-action {
   gap: 8px;
+}
+
+/* Modal Variant Breakdown Styling */
+.modal-variants-box {
+  background: var(--bg-card-warm);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.modal-variants-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.modal-variants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+.modal-variant-item {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-variant-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+.modal-variant-price {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-espresso);
+}
+.modal-note-pill {
+  font-size: 0.8125rem;
+  background: rgba(194, 99, 67, 0.08);
+  color: var(--color-terracotta);
+  border: 1px solid rgba(194, 99, 67, 0.2);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 500;
 }
 
 /* CATEGORY TILE */

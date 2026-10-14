@@ -27,22 +27,25 @@ export const RESTAURANT_INFO = {
 };
 
 export const MENU_CATEGORIES = [
-  { id: "all", label: "All Offerings", count: 30, icon: "sparkles" },
-  { id: "pizzas", label: "Pizzas", count: 7, icon: "pizza" },
-  { id: "pastas", label: "Pastas", count: 5, icon: "pasta" },
-  { id: "combos", label: "Indian Combos", count: 5, icon: "bowl" },
-  { id: "salads", label: "Salads", count: 5, icon: "leaf" },
-  { id: "soups", label: "Soups", count: 5, icon: "soup" },
-  { id: "sides", label: "Sides", count: 3, icon: "utensils" }
+  { id: "all", label: "All Dishes", count: 30, icon: "✦" },
+  { id: "pizzas", label: "Pizzas", count: 7, icon: "🍕" },
+  { id: "salads", label: "Salads", count: 5, icon: "🥗" },
+  { id: "pastas", label: "Pastas", count: 5, icon: "🍝" },
+  { id: "soups", label: "Soups", count: 5, icon: "🍲" },
+  { id: "sides", label: "Sides", count: 3, icon: "🍟" },
+  { id: "combos", label: "Indian Combos", count: 5, icon: "🍛" },
+  { id: "veg-appetizers", label: "Veg Appetizers", count: 0, icon: "🌱" },
+  { id: "nonveg-appetizers", label: "Non-Veg Appetizers", count: 0, icon: "🍗" }
 ];
 
 export const INITIAL_MENU_ITEMS = [
-  // ==================== PIZZAS ====================
+  // ==================== 1. PIZZAS ====================
   {
     id: "mirosa-pizza-margherita",
     name: "Margherita",
     category: "pizzas",
     price: 390,
+    priceDisplay: "₹390",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: true,
@@ -57,9 +60,10 @@ export const INITIAL_MENU_ITEMS = [
     name: "Quattro Formaggi",
     category: "pizzas",
     price: 420,
+    priceDisplay: "₹420",
     isVeg: true,
     isChefSpecial: false,
-    isFeatured: false,
+    isFeatured: true,
     isAvailable: true,
     description: "Quattro Formaggi, Toum Sauce, Parsley.",
     dietary: ["Vegetarian", "Four Cheese", "Toum Sauce"],
@@ -71,20 +75,22 @@ export const INITIAL_MENU_ITEMS = [
     name: "Veg Exotica Pizza",
     category: "pizzas",
     price: 450,
+    priceDisplay: "₹450",
     isVeg: true,
     isChefSpecial: true,
     isFeatured: true,
     isAvailable: true,
     description: "Red Sauce, Mozzarella, Black Olives, Broccoli, Baby Corn, Bellpepers, Onion.",
-    dietary: ["Chef's Special", "Vegetarian", "Loaded Veggies"],
+    dietary: ["Chef's Special", "Vegetarian", "Loaded Farm Veggies"],
     calories: "560 kcal",
-    image: "/assets/real/real-veggie-pizza.jpg"
+    image: "/assets/real/sheet3_8.jpg"
   },
   {
     id: "mirosa-pizza-paneer-tikka",
     name: "Paneer Tikka Pizza",
     category: "pizzas",
     price: 480,
+    priceDisplay: "₹480",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
@@ -92,13 +98,14 @@ export const INITIAL_MENU_ITEMS = [
     description: "Tawa Paneer, Red Sauce, Mozzarella, Capsicum, Onion, Tomato.",
     dietary: ["Vegetarian", "Tawa Paneer", "Indian Fusion"],
     calories: "610 kcal",
-    image: "/assets/real/sheet3_8.jpg"
+    image: "/assets/real/sheet4_5.jpg"
   },
   {
     id: "mirosa-pizza-jerk-chicken",
     name: "Jerk Chicken",
     category: "pizzas",
     price: 480,
+    priceDisplay: "₹480",
     isVeg: false,
     isChefSpecial: false,
     isFeatured: false,
@@ -113,9 +120,10 @@ export const INITIAL_MENU_ITEMS = [
     name: "Alfredo Chicken Pizza",
     category: "pizzas",
     price: 480,
+    priceDisplay: "₹480",
     isVeg: false,
     isChefSpecial: false,
-    isFeatured: true,
+    isFeatured: false,
     isAvailable: true,
     description: "Alfredo Sauce, Grilled Chicken, Mozzarella, Bellpeppers, Mushroom, Onion.",
     dietary: ["Non-Vegetarian", "Alfredo Sauce", "Grilled Chicken"],
@@ -127,6 +135,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Loaded Chicken Pizza",
     category: "pizzas",
     price: 520,
+    priceDisplay: "₹520",
     isVeg: false,
     isChefSpecial: true,
     isFeatured: true,
@@ -137,17 +146,22 @@ export const INITIAL_MENU_ITEMS = [
     image: "/assets/real/real-chicken-pizza.jpg"
   },
 
-  // ==================== SALADS ====================
+  // ==================== 2. SALADS ====================
   {
     id: "mirosa-salad-caesar",
     name: "Caesar Salad",
     category: "salads",
     price: 270,
+    priceDisplay: "₹270 / ₹320",
     isVeg: true,
     isChefSpecial: false,
-    isFeatured: false,
+    isFeatured: true,
     isAvailable: true,
-    description: "Leaves, Croutons, Parmesan, Caesar Dressing. (Veg ₹270 / Chicken ₹320).",
+    description: "Leaves, Croutons, Parmesan, Caesar Dressing.",
+    variants: [
+      { label: "Veg", price: 270 },
+      { label: "Chicken", price: 320 }
+    ],
     dietary: ["Classic Caesar", "Veg | Chicken Option"],
     calories: "280 kcal",
     image: "/assets/real/sheet1_9.jpg"
@@ -157,6 +171,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Greek Salad Feta Cheese",
     category: "salads",
     price: 270,
+    priceDisplay: "₹270",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
@@ -171,6 +186,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Watermelon Feta Salad",
     category: "salads",
     price: 320,
+    priceDisplay: "₹320",
     isVeg: true,
     isChefSpecial: true,
     isFeatured: true,
@@ -185,6 +201,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Mexican Chicken Salad",
     category: "salads",
     price: 340,
+    priceDisplay: "₹340",
     isVeg: false,
     isChefSpecial: false,
     isFeatured: false,
@@ -199,6 +216,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Mirosa Chicken Salad",
     category: "salads",
     price: 360,
+    priceDisplay: "₹360",
     isVeg: false,
     isChefSpecial: true,
     isFeatured: true,
@@ -209,18 +227,19 @@ export const INITIAL_MENU_ITEMS = [
     image: "/assets/real/real-garden-salad.jpg"
   },
 
-  // ==================== PASTAS ====================
+  // ==================== 3. PASTAS ====================
   {
     id: "mirosa-pasta-aglio-olio",
     name: "Aglio Olio Spaghetti",
     category: "pastas",
     price: 420,
+    priceDisplay: "₹420",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
     description: "Spaghetti, Garlic, Parmesan, Olive Oil, Seasoning.",
-    dietary: ["Vegetarian", "Spaghetti", "Olive Oil & Garlic"],
+    dietary: ["Vegetarian", "Spaghetti", "Extra Virgin Olive Oil"],
     calories: "440 kcal",
     image: "/assets/real/sheet1_5.jpg"
   },
@@ -229,6 +248,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Pesto Pasta",
     category: "pastas",
     price: 490,
+    priceDisplay: "₹490",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: true,
@@ -243,11 +263,17 @@ export const INITIAL_MENU_ITEMS = [
     name: "Alfredo Pasta",
     category: "pastas",
     price: 420,
+    priceDisplay: "₹420 / ₹450",
     isVeg: true,
     isChefSpecial: true,
     isFeatured: true,
     isAvailable: true,
-    description: "Choice of Pasta - Penne | Spaghetti. Pasta, Creamy Cheese Sauce, Parmesan Cheese, Fresh Herbs. (Veg ₹420 / Chicken ₹450).",
+    choices: "Choice of Pasta - Penne | Spaghetti",
+    description: "Pasta, Creamy Cheese Sauce, Parmesan Cheese, Fresh Herbs.",
+    variants: [
+      { label: "Veg", price: 420 },
+      { label: "Chicken", price: 450 }
+    ],
     dietary: ["Chef's Special", "Creamy Cheese Sauce", "Veg | Chicken Option"],
     calories: "540 kcal",
     image: "/assets/real/real-creamy-alfredo.jpg"
@@ -257,11 +283,17 @@ export const INITIAL_MENU_ITEMS = [
     name: "Arrabiata Pasta",
     category: "pastas",
     price: 420,
+    priceDisplay: "₹420 / ₹450",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Choice of Pasta - Penne | Spaghetti. Pasta, Tomato Pelati Sauce, Parmesan, Garlic, Olive Oil, Fresh Herbs. (Veg ₹420 / Chicken ₹450).",
+    choices: "Choice of Pasta - Penne | Spaghetti",
+    description: "Pasta, Tomato Pelati Sauce, Parmesan, Garlic, Olive Oil, Fresh Herbs.",
+    variants: [
+      { label: "Veg", price: 420 },
+      { label: "Chicken", price: 450 }
+    ],
     dietary: ["Spicy Tomato Pelati", "Veg | Chicken Option"],
     calories: "460 kcal",
     image: "/assets/real/real-penne-arrabbiata.jpg"
@@ -271,22 +303,29 @@ export const INITIAL_MENU_ITEMS = [
     name: "Mamarosa Pasta",
     category: "pastas",
     price: 420,
+    priceDisplay: "₹420 / ₹450",
     isVeg: true,
     isChefSpecial: true,
-    isFeatured: true,
+    isFeatured: false,
     isAvailable: true,
-    description: "Penne Pasta, Special Mixed Sauce, Fresh Herbs. (Veg ₹420 / Chicken ₹450).",
-    dietary: ["Chef's Special", "Special Mixed Sauce", "Veg | Chicken Option"],
+    choices: "Penne Pasta",
+    description: "Penne Pasta, Special Mixed Sauce, Fresh Herbs.",
+    variants: [
+      { label: "Veg", price: 420 },
+      { label: "Chicken", price: 450 }
+    ],
+    dietary: ["Chef's Special", "Special Mixed Pink Sauce", "Veg | Chicken Option"],
     calories: "510 kcal",
     image: "/assets/real/real-mushroom-pasta.jpg"
   },
 
-  // ==================== SOUPS ====================
+  // ==================== 4. SOUPS ====================
   {
     id: "mirosa-soup-broccoli",
     name: "Broccoli Soup",
     category: "soups",
     price: 200,
+    priceDisplay: "₹200",
     isVeg: true,
     isChefSpecial: true,
     isFeatured: false,
@@ -301,6 +340,7 @@ export const INITIAL_MENU_ITEMS = [
     name: "Cream of Mushroom",
     category: "soups",
     price: 210,
+    priceDisplay: "₹210",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
@@ -308,33 +348,43 @@ export const INITIAL_MENU_ITEMS = [
     description: "Mushroom, Parmesan Cheese, Fresh Cream.",
     dietary: ["Vegetarian", "Parmesan Cheese", "Fresh Cream"],
     calories: "180 kcal",
-    image: "/assets/real/real-mushroom-pasta.jpg"
+    image: "/assets/real/sheet4_6.jpg"
   },
   {
     id: "mirosa-soup-hot-sour",
-    name: "Hot & Sour Soup",
+    name: "Hot & Sour",
     category: "soups",
     price: 190,
+    priceDisplay: "₹190 / ₹230",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Spicy Sauce, Veggies. (Veg ₹190 / Chicken ₹230).",
-    dietary: ["Spicy Sauce", "Veg | Chicken Option"],
+    description: "Spicy Sauce, Veggies.",
+    variants: [
+      { label: "Veg", price: 190 },
+      { label: "Chicken", price: 230 }
+    ],
+    dietary: ["Spicy Asian Broth", "Veg | Chicken Option"],
     calories: "140 kcal",
     image: "/assets/real/sheet5_2.jpg"
   },
   {
     id: "mirosa-soup-lemon-coriander",
-    name: "Lemon Coriander Soup",
+    name: "Lemon Coriander",
     category: "soups",
     price: 190,
+    priceDisplay: "₹190 / ₹230",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Lemon, Coriander, Veggies. (Veg ₹190 / Chicken ₹230).",
-    dietary: ["Citrus & Fresh", "Veg | Chicken Option"],
+    description: "Lemon, Coriander, Veggies.",
+    variants: [
+      { label: "Veg", price: 190 },
+      { label: "Chicken", price: 230 }
+    ],
+    dietary: ["Citrus & Fresh Herb Broth", "Veg | Chicken Option"],
     calories: "110 kcal",
     image: "/assets/real/sheet5_8.jpg"
   },
@@ -343,28 +393,35 @@ export const INITIAL_MENU_ITEMS = [
     name: "Alfredo De Pollo",
     category: "soups",
     price: 230,
+    priceDisplay: "₹230",
     isVeg: false,
     isChefSpecial: true,
     isFeatured: false,
     isAvailable: true,
     description: "Chicken, Parmesan Cheese, Cream.",
-    dietary: ["Chef's Special", "Non-Vegetarian", "Chicken & Cream"],
+    dietary: ["Chef's Special", "Non-Vegetarian", "Velvety Chicken Cream"],
     calories: "220 kcal",
     image: "/assets/real/sheet3_1.jpg"
   },
 
-  // ==================== SIDES ====================
+  // ==================== 5. SIDES ====================
   {
     id: "mirosa-sides-french-fries",
     name: "Choice of French Fries",
     category: "sides",
     price: 220,
+    priceDisplay: "₹220 / ₹240 / ₹340",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: true,
     isAvailable: true,
-    description: "Crisp golden potato fries. Salted (₹220) | Peri Peri (₹240) | Truffle Parmesan (₹340).",
-    dietary: ["Vegetarian", "Salted | Peri Peri | Truffle Parmesan"],
+    description: "Crisp golden potato fries. Salted | Peri Peri | Truffle Parmesan.",
+    variants: [
+      { label: "Salted", price: 220 },
+      { label: "Peri Peri", price: 240 },
+      { label: "Truffle Parmesan", price: 340 }
+    ],
+    dietary: ["Vegetarian", "Salted · Peri Peri · Truffle Parmesan"],
     calories: "380 kcal",
     image: "/assets/real/real-truffle-fries.jpg"
   },
@@ -373,12 +430,17 @@ export const INITIAL_MENU_ITEMS = [
     name: "Garlic Bread",
     category: "sides",
     price: 220,
+    priceDisplay: "₹220 / ₹250",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Home-made Loaf, Mozzarella, Garlic Seasoning. Classic (₹220) | Cheese (₹250).",
-    dietary: ["Vegetarian", "Homemade Loaf", "Classic | Cheese"],
+    description: "Home-made Loaf, Mozzarella, Garlic Seasoning.",
+    variants: [
+      { label: "Classic", price: 220 },
+      { label: "Cheese", price: 250 }
+    ],
+    dietary: ["Vegetarian", "House-Baked Loaf", "Classic · Cheese"],
     calories: "290 kcal",
     image: "/assets/real/real-french-toast.jpg"
   },
@@ -387,27 +449,34 @@ export const INITIAL_MENU_ITEMS = [
     name: "Loaded Mexican Nachos",
     category: "sides",
     price: 320,
+    priceDisplay: "₹320 / ₹360",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Spicy Beans, Salsa, Gaucamole, Sour Cream, Cheese Sauce. (Veg ₹320 / Chicken ₹360).",
+    description: "Spicy Beans, Salsa, Gaucamole, Sour Cream, Cheese Sauce.",
+    variants: [
+      { label: "Veg", price: 320 },
+      { label: "Chicken", price: 360 }
+    ],
     dietary: ["Guacamole & Salsa", "Sour Cream & Cheese", "Veg | Chicken Option"],
     calories: "450 kcal",
     image: "/assets/real/real-spring-rolls.jpg"
   },
 
-  // ==================== INDIAN COMBOS ====================
+  // ==================== 6. INDIAN COMBOS ====================
   {
     id: "mirosa-combo-paneer-masala",
     name: "Paneer Masala Rice Bowl",
     category: "combos",
     price: 450,
+    priceDisplay: "₹450",
     isVeg: true,
     isChefSpecial: true,
     isFeatured: true,
     isAvailable: true,
-    description: "Served with Jeera Rice. Tender cottage cheese in spiced onion tomato masala gravy.",
+    servedWith: "Served with Jeera Rice",
+    description: "Served with Jeera Rice. Tender cottage cheese in rich aromatic onion-tomato spiced gravy.",
     dietary: ["Chef's Special", "Vegetarian", "Served with Jeera Rice"],
     calories: "580 kcal",
     image: "/assets/real/sheet5_2.jpg"
@@ -417,11 +486,13 @@ export const INITIAL_MENU_ITEMS = [
     name: "Patiyala Paneer Rice Bowl",
     category: "combos",
     price: 450,
+    priceDisplay: "₹450",
     isVeg: true,
     isChefSpecial: false,
     isFeatured: false,
     isAvailable: true,
-    description: "Served with Jeera Rice. Rich Punjabi Patiyala style paneer gravy.",
+    servedWith: "Served with Jeera Rice",
+    description: "Served with Jeera Rice. Rich Punjabi Patiyala-style paneer simmered in hearty royal spices.",
     dietary: ["Vegetarian", "Punjabi Style", "Served with Jeera Rice"],
     calories: "590 kcal",
     image: "/assets/real/sheet5_2.jpg"
@@ -431,11 +502,13 @@ export const INITIAL_MENU_ITEMS = [
     name: "Butter Chicken Rice Bowl",
     category: "combos",
     price: 460,
+    priceDisplay: "₹460",
     isVeg: false,
     isChefSpecial: false,
     isFeatured: true,
     isAvailable: true,
-    description: "Served with Jeera Rice. Classic tender chicken in velvety makhani butter gravy.",
+    servedWith: "Served with Jeera Rice",
+    description: "Served with Jeera Rice. Succulent charred chicken tikka in velvety butter makhani gravy.",
     dietary: ["Bestseller", "Non-Vegetarian", "Served with Jeera Rice"],
     calories: "640 kcal",
     image: "/assets/real/real-rice-bowl.jpg"
@@ -445,11 +518,13 @@ export const INITIAL_MENU_ITEMS = [
     name: "Afghani Chicken Rice Bowl",
     category: "combos",
     price: 480,
+    priceDisplay: "₹480",
     isVeg: false,
     isChefSpecial: true,
     isFeatured: true,
     isAvailable: true,
-    description: "Served with Egg Omelette & Butter Rice. Mild creamy Afghani chicken.",
+    servedWith: "Served with Egg Omelette & Butter Rice",
+    description: "Served with Egg Omelette & Butter Rice. Tender marinated chicken in silky Afghani cashew cream gravy.",
     dietary: ["Chef's Special", "Non-Vegetarian", "Egg Omelette & Butter Rice"],
     calories: "690 kcal",
     image: "/assets/real/sheet1_1.jpg"
@@ -459,11 +534,13 @@ export const INITIAL_MENU_ITEMS = [
     name: "Lamb Keema Rice Bowl",
     category: "combos",
     price: 510,
+    priceDisplay: "₹510",
     isVeg: false,
     isChefSpecial: true,
     isFeatured: true,
     isAvailable: true,
-    description: "Served with Cashew Butter Rice. Spiced minced lamb keema cooked to perfection.",
+    servedWith: "Served with Cashew Butter Rice",
+    description: "Served with Cashew Butter Rice. Slow-cooked minced spiced lamb keema infused with whole garam masala.",
     dietary: ["Chef's Special", "Non-Vegetarian", "Cashew Butter Rice"],
     calories: "720 kcal",
     image: "/assets/real/real-rice-bowl.jpg"
@@ -483,7 +560,7 @@ export const GALLERY_ITEMS = [
     id: 2,
     title: "Iconic Terrazzo Spiral Staircase",
     category: "interior",
-    description: "Architectural spiral staircase with terrazzo stairs and indoor greenery leading to the mezzanine floor.",
+    description: "Architectural spiral staircase with terrazzo steps and indoor greenery leading to the mezzanine floor.",
     image: "/assets/real/real-spiral-stairs.jpg",
     span: "col-span-1"
   },
@@ -513,9 +590,9 @@ export const GALLERY_ITEMS = [
   },
   {
     id: 6,
-    title: "Loaded Chicken Pizza",
+    title: "Artisan Spiced Chicken Pizza",
     category: "food",
-    description: "Pepperoni, spicy chicken, sausage, mozzarella and chipotle sauce on crisp crust.",
+    description: "Freshly baked pizza topped with spiced chicken chunks, mozzarella, and house cream drizzle.",
     image: "/assets/real/real-chicken-pizza.jpg",
     span: "col-span-1"
   },
@@ -537,26 +614,26 @@ export const GALLERY_ITEMS = [
   },
   {
     id: 9,
-    title: "Mirosa Chicken Salad",
+    title: "Crispy Chicken Schnitzel & Fries",
     category: "food",
-    description: "Mixed sauteed veggies, grilled chicken, boiled egg, spicy beans and special dressing.",
-    image: "/assets/real/real-garden-salad.jpg",
+    description: "Golden fried chicken cutlet served with hand-cut fries, garlic dip, and garden salad.",
+    image: "/assets/real/real-crispy-chicken.jpg",
     span: "col-span-1"
   },
   {
     id: 10,
-    title: "Farm-Fresh Veg Exotica Pizza",
+    title: "Farm-Fresh Veggie Loaded Pizza",
     category: "food",
-    description: "Black olives, broccoli, baby corn, bell peppers and mozzarella on crisp crust.",
+    description: "Crisp thin crust pizza generously topped with bell peppers, sweet corn, black olives, and herbs.",
     image: "/assets/real/real-veggie-pizza.jpg",
     span: "col-span-1"
   },
   {
     id: 11,
-    title: "Butter Chicken Rice Bowl",
-    category: "food",
-    description: "Classic tender chicken in rich makhani gravy served with fragrant Jeera Rice.",
-    image: "/assets/real/real-rice-bowl.jpg",
+    title: "Sparkling Citrus Mint Spritz",
+    category: "drinks",
+    description: "Effervescent citrus cooler garnished with fresh garden mint and dehydrated orange.",
+    image: "/assets/real/real-citrus-spritz.jpg",
     span: "col-span-1"
   },
   {

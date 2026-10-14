@@ -131,10 +131,16 @@ function initAnnouncementBar() {
 function initCategoryTiles() {
   document.querySelectorAll('.category-tile').forEach(tile => {
     tile.addEventListener('click', (e) => {
-      e.preventDefault();
       const cat = tile.dataset.category;
       if (cat) {
-        selectCategory(cat);
+        const fullMenuGrid = document.getElementById('full-menu-grid');
+        if (fullMenuGrid) {
+          e.preventDefault();
+          selectCategory(cat);
+        } else {
+          // On homepage, navigate to dedicated menu page pre-filtered to this category
+          window.location.href = `/menu.html?cat=${encodeURIComponent(cat)}`;
+        }
       }
     });
   });
