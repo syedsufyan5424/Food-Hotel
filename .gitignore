@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Production Build
+dist/
+
+# Vercel
+.vercel/
+
+# Environment and local settings
+.env
+.env.local
+.DS_Store
+Thumbs.db
